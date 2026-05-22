@@ -72,6 +72,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink)}
 .tbl tr:last-child td{border:none}
 .tbl td:first-child{font-weight:600;color:var(--forest)}
 .tbl tr.highlight td{background:#fffbef!important;font-weight:600}
+.messaging-table td::before{display:none}
 
 .bdg{display:inline-block;padding:2px 9px;border-radius:20px;font-size:10.5px;font-weight:600}
 .bf{background:rgba(13,43,31,.1);color:var(--forest)}
@@ -133,6 +134,34 @@ hr.dv{border:none;border-top:1px solid var(--border);margin:24px 0}
   .pbudget{font-size:16px}.pay-steps{flex-direction:column}
   .pay-step{border-right:none;border-bottom:1px solid var(--border)}
   .pay-step:last-child{border-bottom:none}
+  .card{padding:20px}
+  .messaging-table,
+  .messaging-table thead,
+  .messaging-table tbody,
+  .messaging-table tr,
+  .messaging-table th,
+  .messaging-table td{display:block}
+  .messaging-table thead{display:none}
+  .messaging-table tbody{display:grid;gap:12px}
+  .messaging-table tr{border:1px solid var(--border);border-radius:10px;overflow:hidden;background:#fafaf5}
+  .messaging-table tr:nth-child(even) td{background:transparent}
+  .messaging-table td{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+    padding:12px 14px;
+    border-bottom:1px solid var(--border);
+  }
+  .messaging-table td:last-child{border-bottom:none}
+  .messaging-table td::before{
+    content:attr(data-label);
+    display:block;
+    font-size:10px;
+    font-weight:700;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
 }
 </style>
 </head>
@@ -633,13 +662,13 @@ hr.dv{border:none;border-top:1px solid var(--border);margin:24px 0}
     <div class="card"><div class="chd"><div class="ib ig">🎨</div><div><div class="cl">Visual Direction</div><div class="ct">Calm Authority — Not Clinical, Not Casual</div></div></div><p>Avoid cold hospital white + clinical blue (intimidating). Avoid bright pastels + playful icons (trivialises mental health). The recommended direction: deep teal + warm cream + measured gold accents. Soft geometric forms. Humanist typeface for warmth, serif for authority. Think: a trusted professional who actually listens.</p></div>
   </div>
   <div class="card"><div class="chd"><div class="ib it">🗣️</div><div><div class="cl">Messaging Framework</div><div class="ct">What Psyzen Says — and How It Says It</div></div></div>
-    <table class="tbl" style="margin-top:12px">
+    <table class="tbl messaging-table" style="margin-top:12px">
       <thead><tr><th>Audience</th><th>Core Message</th><th>Tone</th><th>Primary Channel</th></tr></thead>
       <tbody>
-        <tr><td>General Public</td><td>"You don't need to figure it out alone."</td><td>Warm, accessible, non-clinical</td><td>Instagram, Google Ads</td></tr>
-        <tr><td>Clinicians</td><td>"AI that works with you, not instead of you."</td><td>Professional, evidence-based</td><td>LinkedIn, WhatsApp</td></tr>
-        <tr><td>Corporate HR</td><td>"Give your team the mental health support they deserve."</td><td>ROI-focused, empathetic</td><td>LinkedIn, Email, Events</td></tr>
-        <tr><td>Students</td><td>"Talk first. Understand what you're feeling. Get the right help."</td><td>Casual, relatable, stigma-free</td><td>Instagram, YouTube Shorts</td></tr>
+        <tr><td data-label="Audience">General Public</td><td data-label="Core Message">"You don't need to figure it out alone."</td><td data-label="Tone">Warm, accessible, non-clinical</td><td data-label="Primary Channel">Instagram, Google Ads</td></tr>
+        <tr><td data-label="Audience">Clinicians</td><td data-label="Core Message">"AI that works with you, not instead of you."</td><td data-label="Tone">Professional, evidence-based</td><td data-label="Primary Channel">LinkedIn, WhatsApp</td></tr>
+        <tr><td data-label="Audience">Corporate HR</td><td data-label="Core Message">"Give your team the mental health support they deserve."</td><td data-label="Tone">ROI-focused, empathetic</td><td data-label="Primary Channel">LinkedIn, Email, Events</td></tr>
+        <tr><td data-label="Audience">Students</td><td data-label="Core Message">"Talk first. Understand what you're feeling. Get the right help."</td><td data-label="Tone">Casual, relatable, stigma-free</td><td data-label="Primary Channel">Instagram, YouTube Shorts</td></tr>
       </tbody>
     </table>
   </div>
