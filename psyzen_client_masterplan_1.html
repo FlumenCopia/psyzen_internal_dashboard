@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Psyzen — Strategic Masterplan 2025–2026 | FlumenX</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --forest:#0D2B1F;--forest2:#1A4A32;--gold:#B8943A;--gold2:#C9A84C;
+  --teal:#5BA8A8;--cream:#FAF8F0;--parch:#F2EDE0;--ink:#1a1a1a;
+  --muted:#6b6b5a;--border:#DDD8C8;--rose:#c4796a;--warn:#e8a838;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--ink)}
+
+.hero{background:linear-gradient(135deg,var(--forest) 0%,var(--forest2) 60%,#1A4228 100%);color:#fff;padding:52px 60px 44px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-80px;right:-80px;width:380px;height:380px;border-radius:50%;background:rgba(185,148,58,.07)}
+.hero-tag{font-family:'Bebas Neue';font-size:11px;letter-spacing:4px;color:var(--gold2);margin-bottom:16px}
+.hero h1{font-family:'Cormorant Garamond',serif;font-size:42px;font-weight:700;line-height:1.2;max-width:700px;z-index:1;position:relative;margin-bottom:12px}
+.hero h1 em{color:var(--gold2);font-style:italic}
+.hero-sub{font-size:14px;color:rgba(255,255,255,.6);max-width:560px;line-height:1.8;margin-bottom:30px;position:relative;z-index:1}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;position:relative;z-index:1}
+.hs{text-align:center}
+.hs-n{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--gold2);line-height:1}
+.hs-l{font-size:10px;color:rgba(255,255,255,.45);margin-top:4px;letter-spacing:.5px}
+.hd{width:1px;background:rgba(255,255,255,.12)}
+
+.nav{background:#fff;border-bottom:2px solid var(--border);padding:0 40px;display:flex;overflow-x:auto;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.07)}
+.tb{font-size:12.5px;font-weight:500;color:var(--muted);background:none;border:none;border-bottom:3px solid transparent;padding:14px 15px;cursor:pointer;white-space:nowrap;transition:all .2s}
+.tb:hover{color:var(--forest)}.tb.active{color:var(--forest);border-bottom-color:var(--gold);font-weight:600}
+
+.wrap{max-width:1100px;margin:0 auto;padding:44px 40px 100px}
+.sec{display:none}.sec.on{display:block}
+
+.slbl{font-family:'Bebas Neue';font-size:11px;letter-spacing:4px;color:var(--gold);margin-bottom:6px}
+.sh{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--forest);margin-bottom:6px}
+.ss{font-size:13.5px;color:var(--muted);margin-bottom:30px;line-height:1.7}
+
+.card{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px 28px;margin-bottom:18px}
+.chd{display:flex;gap:14px;align-items:flex-start;margin-bottom:12px}
+.ib{width:40px;height:40px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.if{background:rgba(13,43,31,.1)}.ig{background:rgba(185,148,58,.1)}.it{background:rgba(91,168,168,.12)}.ir{background:rgba(196,121,106,.1)}
+.ct{font-family:'Cormorant Garamond',serif;font-size:17px;font-weight:600;color:var(--forest)}
+.cl{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+.card p{font-size:13.5px;color:#4a4a3a;line-height:1.75}
+
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:16px}
+.g4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:18px}
+
+.kb{background:#fff;border:1px solid var(--border);border-radius:10px;padding:18px;text-align:center}
+.kn{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--forest);line-height:1}
+.ks{font-size:11px;color:var(--muted);margin-top:5px}
+
+.hl{background:#fffbef;border:1px solid #f0d88a;border-left:4px solid var(--gold);border-radius:8px;padding:14px 18px;font-size:13.5px;color:#4a3d10;line-height:1.75;margin:14px 0}
+.wb{background:#fff5f3;border:1px solid #f0c4bb;border-left:4px solid var(--rose);border-radius:8px;padding:14px 18px;font-size:13.5px;color:#5a3530;line-height:1.75;margin:12px 0}
+.fb{background:linear-gradient(135deg,var(--forest),var(--forest2));color:#fff;border-radius:12px;padding:26px 30px;margin-bottom:18px}
+.fb p{color:rgba(255,255,255,.85);font-size:14px;line-height:1.75}
+
+.chklist{list-style:none;margin-top:10px}
+.chklist li{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;color:#4a4a3a;padding:6px 0;border-bottom:1px solid var(--border);line-height:1.6}
+.chklist li:last-child{border:none}
+.dot{min-width:20px;height:20px;border-radius:50%;background:var(--forest);color:#fff;font-size:10px;display:flex;align-items:center;justify-content:center;margin-top:2px;flex-shrink:0}
+.dot.g{background:var(--gold)}.dot.t{background:var(--teal)}.dot.r{background:var(--rose)}
+
+.tbl{width:100%;border-collapse:collapse;font-size:13px}
+.tbl th{background:var(--forest);color:#fff;padding:10px 14px;text-align:left;font-size:11px;letter-spacing:.5px;font-weight:600}
+.tbl th:first-child{border-radius:8px 0 0 0}.tbl th:last-child{border-radius:0 8px 0 0}
+.tbl td{padding:9px 14px;border-bottom:1px solid var(--border);color:#4a4a3a;vertical-align:top;line-height:1.6}
+.tbl tr:nth-child(even) td{background:#fafaf5}
+.tbl tr:last-child td{border:none}
+.tbl td:first-child{font-weight:600;color:var(--forest)}
+.tbl tr.highlight td{background:#fffbef!important;font-weight:600}
+
+.bdg{display:inline-block;padding:2px 9px;border-radius:20px;font-size:10.5px;font-weight:600}
+.bf{background:rgba(13,43,31,.1);color:var(--forest)}
+.bg{background:rgba(185,148,58,.12);color:#7a5a00}
+.bt{background:rgba(91,168,168,.12);color:#2a6868}
+.br{background:rgba(196,121,106,.12);color:#7a3020}
+.bw{background:rgba(232,168,56,.15);color:#7a5000}
+
+.cwin{color:#1a6b2a;font-weight:600}.cgap{color:var(--rose);font-weight:600}.cmid{color:var(--warn)}
+
+/* ── PHASE ACCORDION ── */
+.phase{border:1.5px solid var(--border);border-radius:14px;margin-bottom:22px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.04)}
+.phase-hdr{display:flex;align-items:center;gap:16px;padding:20px 24px;cursor:pointer;background:#fff;transition:background .2s;user-select:none}
+.phase-hdr:hover{background:var(--parch)}
+.pnum{width:46px;height:46px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue';font-size:22px;color:#fff;flex-shrink:0}
+.ptitle{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--forest)}
+.psubtitle{font-size:12px;color:var(--muted);margin-top:2px}
+.pright{margin-left:auto;display:flex;gap:14px;align-items:center}
+.pbudget{font-family:'Bebas Neue';font-size:22px;color:var(--gold)}
+.parrow{font-size:20px;color:var(--muted);transition:transform .25s;display:inline-block}
+.parrow.open{transform:rotate(180deg)}
+.phase-body{display:none;padding:0 24px 24px;background:var(--parch);border-top:1.5px solid var(--border)}
+.phase-body.open{display:block}
+
+/* ── PAYMENT STEPS ── */
+.pay-steps{display:flex;gap:0;margin-top:14px;border-radius:10px;overflow:hidden;border:1px solid var(--border)}
+.pay-step{flex:1;padding:14px 16px;text-align:center;background:#fff;border-right:1px solid var(--border)}
+.pay-step:last-child{border-right:none}
+.pay-pct{font-family:'Bebas Neue';font-size:28px;color:var(--forest);line-height:1}
+.pay-lbl{font-size:11px;color:var(--muted);margin-top:4px;font-weight:500}
+.pay-when{font-size:10px;color:var(--teal);margin-top:2px;font-weight:600;text-transform:uppercase;letter-spacing:.5px}
+
+/* ── PACKAGE CARDS ── */
+.pkg{border:1px solid var(--border);border-radius:10px;padding:18px;background:#fff;margin-bottom:12px}
+.pkg.rec{border-color:var(--gold);background:#fffdf5}
+.pkg-name{font-weight:700;font-size:14px;color:var(--forest);margin-bottom:4px}
+.pkg-price{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--forest);margin-bottom:6px}
+.pkg-price span{font-size:13px;font-weight:400;color:var(--muted)}
+.pkg-tag{font-size:10px;font-weight:700;background:var(--gold);color:#fff;padding:2px 8px;border-radius:20px;display:inline-block;margin-bottom:8px}
+
+/* ── TIMELINE ── */
+.tl{position:relative;padding-left:36px}
+.tl::before{content:'';position:absolute;left:9px;top:6px;bottom:6px;width:2px;background:var(--border)}
+.tli{position:relative;margin-bottom:24px}
+.tldot{position:absolute;left:-30px;top:4px;width:14px;height:14px;border-radius:50%;background:var(--forest)}
+.tlm{font-size:10px;font-weight:700;letter-spacing:1px;color:var(--gold);text-transform:uppercase;margin-bottom:3px}
+.tlt{font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--forest);margin-bottom:4px}
+.tld{font-size:12.5px;color:var(--muted);line-height:1.65}
+
+hr.dv{border:none;border-top:1px solid var(--border);margin:24px 0}
+
+.footer{background:var(--forest);color:rgba(255,255,255,.5);text-align:center;padding:22px;font-size:12px;margin-top:60px}
+.footer strong{color:var(--gold2)}
+
+@media(max-width:768px){
+  .hero{padding:28px 20px}.hero h1{font-size:26px}
+  .nav{padding:0 10px}.wrap{padding:24px 14px 60px}
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  .pbudget{font-size:16px}.pay-steps{flex-direction:column}
+  .pay-step{border-right:none;border-bottom:1px solid var(--border)}
+  .pay-step:last-child{border-bottom:none}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">FlumenX × Psyzen · Strategic Masterplan · 2025–2026</div>
+  <h1>From Concept to <em>Category Leader</em> —<br>A Phased Masterplan</h1>
+  <p class="hero-sub">A data-driven, phase-by-phase strategic execution plan covering brand architecture, platform development, digital marketing, SAG·EO, and market entry across 12 months — built for a Trivandrum startup's cash flow reality.</p>
+  <div class="hero-stats">
+    <div class="hs"><div class="hs-n">$133M</div><div class="hs-l">India Online Mental Health 2024</div></div>
+    <div class="hd"></div>
+    <div class="hs"><div class="hs-n">13.4%</div><div class="hs-l">Market CAGR 2025–2033</div></div>
+    <div class="hd"></div>
+    <div class="hs"><div class="hs-n">₹451M</div><div class="hs-l">Projected Market 2033</div></div>
+    <div class="hd"></div>
+    <div class="hs"><div class="hs-n">5</div><div class="hs-l">Execution Phases</div></div>
+    <div class="hd"></div>
+    <div class="hs"><div class="hs-n">12M</div><div class="hs-l">Strategic Roadmap</div></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button class="tb active" onclick="showTab('vision',this)">Vision & Why Phased</button>
+  <button class="tb" onclick="showTab('market',this)">Market Intelligence</button>
+  <button class="tb" onclick="showTab('phases',this)">5-Phase Plan</button>
+  <button class="tb" onclick="showTab('brand',this)">Brand Architecture</button>
+  <button class="tb" onclick="showTab('marketing',this)">Marketing Strategy</button>
+  <button class="tb" onclick="showTab('roadmap',this)">12M / 90D / 30D</button>
+  <button class="tb" onclick="showTab('budget',this)">Budget & Pricing</button>
+  <button class="tb" onclick="showTab('sageo',this)">SAG·EO Plan</button>
+  <button class="tb" onclick="showTab('future',this)">Future Expansion</button>
+</div>
+
+<div class="wrap">
+
+<!-- ═══ VISION ═══ -->
+<div class="sec on" id="sec-vision">
+  <div class="slbl">The Full Picture</div>
+  <div class="sh">Psyzen: What You Are Really Building</div>
+  <div class="ss">Before phases and budgets — understand the full scope and ambition. Then understand why a phased approach is not a compromise. It is the only viable path for an early-stage startup.</div>
+
+  <div class="fb">
+    <p><strong style="color:var(--gold2)">The Total Vision:</strong> Psyzen is a full-stack AI-powered mental healthcare ecosystem — combining intelligent triage (4-tier clinical escalation), local LLM-based AI companion, crisis detection, multi-modal consultation (text, voice, video, in-person), RAG knowledge retrieval, professional dashboards for clinicians, and a privacy-first local data architecture. Built in Trivandrum. Designed to scale across India and beyond. This is not a therapy chatbot. This is clinical infrastructure.</p>
+  </div>
+
+  <div class="g4">
+    <div class="kb"><div class="kn">20–24wk</div><div class="ks">Full platform build (ideal team)</div></div>
+    <div class="kb"><div class="kn">₹32–38L</div><div class="ks">Total Year 1 (IT + FlumenX)</div></div>
+    <div class="kb"><div class="kn">8–9</div><div class="ks">Specialist roles required</div></div>
+    <div class="kb"><div class="kn">5</div><div class="ks">Phases across 12 months</div></div>
+  </div>
+
+  <div class="slbl" style="margin-top:30px">Why Phased?</div>
+  <div class="sh">7 Reasons Step-by-Step Wins</div>
+  <div class="ss">Committing ₹30L+ upfront to an unvalidated platform is how early-stage startups fail. Here is exactly why phasing is the professional and strategic choice.</div>
+
+  <div class="card"><div class="chd"><div class="ib if">💡</div><div><div class="cl">Reason 1</div><div class="ct">Capital Preservation — Spend Only What You Validate</div></div></div><p>Release budget per phase. Phase 0 branding costs ₹29,999. Phase 2 MVP costs ₹10–12L. If the MVP shows strong adoption, Phase 3–5 are funded by evidence — not hope. You don't need to build the whole hospital before the first patient walks in.</p></div>
+
+  <div class="card"><div class="chd"><div class="ib ig">🏗️</div><div><div class="cl">Reason 2</div><div class="ct">Each Phase Validates the Next — Real-World Evidence</div></div></div><p>The MVP will generate real user behavior data — which consultation modes are used, which tier is most requested, where users drop off. This intelligence shapes Phase 3's AI features. Building voice before knowing if users prefer text is expensive guesswork.</p></div>
+
+  <div class="card"><div class="chd"><div class="ib it">📣</div><div><div class="cl">Reason 3</div><div class="ct">Marketing Before Platform — Build Audience First</div></div></div><p>Mental health is a new concept for most users in Kerala. A 2-month pre-launch marketing phase means Psyzen launches to an educated, waiting audience — not an empty waiting room. Most platforms skip this and spend 6 months explaining what they are while also trying to acquire users.</p></div>
+
+  <div class="card"><div class="chd"><div class="ib if">💰</div><div><div class="cl">Reason 4</div><div class="ct">Monthly Cash Flow vs. Lump-Sum Commitment</div></div></div><p>Instead of one ₹30L invoice, phasing converts investment into predictable monthly costs: ₹2–3.5L/month across 12 months. This is manageable within startup cash flow, allows EMI financing, and lets the business generate first revenue from beta clinics before the full build is complete.</p></div>
+
+  <div class="card"><div class="chd"><div class="ib ig">⚖️</div><div><div class="cl">Reason 5</div><div class="ct">Legal and Compliance Complexity Requires Iteration</div></div></div><p>DPDP Act compliance, Telemedicine Practice Guidelines 2020, informed consent flows, and crisis detection liability are evolving requirements needing legal review. A phased build lets each compliance layer be reviewed before the next layer is added — rather than auditing 60,000 lines of code at launch.</p></div>
+
+  <div class="card"><div class="chd"><div class="ib it">🤖</div><div><div class="cl">Reason 6</div><div class="ct">AI Systems Need Iteration — Not Just Integration</div></div></div><p>A local LLM-powered mental health triage system cannot be built in 5 weeks and deployed to real patients. The AI needs prompt engineering cycles, clinical validation, safety testing, and hallucination audits. Phasing gives the team 3 months of MVP feedback before RAG and crisis detection go live.</p></div>
+
+  <div class="card"><div class="chd"><div class="ib ir">🎯</div><div><div class="cl">Reason 7</div><div class="ct">Brand First — Platform Second</div></div></div><p>Psyzen is entering a trust-sensitive market. Users will not share their most vulnerable moments with a platform they've never heard of. Building brand identity and content reputation before the platform launches means users arrive with trust already established.</p></div>
+</div>
+
+<!-- ═══ MARKET ═══ -->
+<div class="sec" id="sec-market">
+  <div class="slbl">Data-Driven Intelligence</div>
+  <div class="sh">Market Opportunity & Competitive Landscape</div>
+  <div class="ss">India's mental health digital market is at an inflection point. Understanding the numbers, competitors, and white space informs every strategic decision in this plan.</div>
+
+  <div class="g4">
+    <div class="kb"><div class="kn">$133M</div><div class="ks">India Online Mental Health 2024</div></div>
+    <div class="kb"><div class="kn">$451M</div><div class="ks">Projected 2033 (13.4% CAGR)</div></div>
+    <div class="kb"><div class="kn">$1.96B</div><div class="ks">Mental Health Apps by 2035</div></div>
+    <div class="kb"><div class="kn">197M</div><div class="ks">Indians with mental health conditions</div></div>
+  </div>
+
+  <!-- Market chart -->
+  <div class="card" style="padding:22px 24px">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--forest);margin-bottom:4px">India Online Mental Health Market Growth (USD Million)</div>
+    <div style="font-size:11.5px;color:var(--muted);margin-bottom:18px">Source: IMARC Group 2025 — 13.4% CAGR. South India leads market share.</div>
+    <svg viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-height:220px">
+      <defs><linearGradient id="gb1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#1A4A32" stop-opacity=".9"/><stop offset="100%" stop-color="#1A4A32" stop-opacity=".35"/></linearGradient></defs>
+      <line x1="55" y1="10" x2="55" y2="175" stroke="#e0ddd0" stroke-width="1"/>
+      <line x1="55" y1="175" x2="660" y2="175" stroke="#e0ddd0" stroke-width="1"/>
+      <text x="48" y="175" text-anchor="end" font-size="9" fill="#9a9a8a">0</text>
+      <text x="48" y="132" text-anchor="end" font-size="9" fill="#9a9a8a">100</text>
+      <text x="48" y="89" text-anchor="end" font-size="9" fill="#9a9a8a">250</text>
+      <text x="48" y="46" text-anchor="end" font-size="9" fill="#9a9a8a">400</text>
+      <rect x="64" y="124" width="50" height="51" rx="4" fill="url(#gb1)"/><text x="89" y="119" text-anchor="middle" font-size="8" fill="#5a5a4a">133</text><text x="89" y="188" text-anchor="middle" font-size="8" fill="#9a9a8a">2024</text>
+      <rect x="124" y="117" width="50" height="58" rx="4" fill="url(#gb1)"/><text x="149" y="112" text-anchor="middle" font-size="8" fill="#5a5a4a">151</text><text x="149" y="188" text-anchor="middle" font-size="8" fill="#9a9a8a">2025</text>
+      <rect x="184" y="109" width="50" height="66" rx="4" fill="url(#gb1)"/><text x="209" y="104" text-anchor="middle" font-size="8" fill="#5a5a4a">171</text><text x="209" y="188" text-anchor="middle" font-size="8" fill="#9a9a8a">2026</text>
+      <rect x="244" y="100" width="50" height="75" rx="4" fill="url(#gb1)"/><text x="269" y="95" text-anchor="middle" font-size="8" fill="#5a5a4a">194</text><text x="269" y="188" text-anchor="middle" font-size="8" fill="#9a9a8a">2027</text>
+      <rect x="304" y="90" width="50" height="85" rx="4" fill="url(#gb1)"/><text x="329" y="85" text-anchor="middle" font-size="8" fill="#5a5a4a">220</text><text x="329" y="188" text-anchor="middle" font-size="8" fill="#9a9a8a">2028</text>
+      <rect x="364" y="79" width="50" height="96" rx="4" fill="url(#gb1)"/><text x="389" y="74" text-anchor="middle" font-size="8" fill="#5a5a4a">250</text><text x="389" y="188" text-anchor="middle" font-size="8" fill="#9a9a8a">2029</text>
+      <rect x="424" y="66" width="50" height="109" rx="4" fill="url(#gb1)"/><text x="449" y="61" text-anchor="middle" font-size="8" fill="#5a5a4a">283</text><text x="449" y="188" text-anchor="middle" font-size="8" fill="#9a9a8a">2030</text>
+      <rect x="484" y="51" width="50" height="124" rx="4" fill="url(#gb1)"/><text x="509" y="46" text-anchor="middle" font-size="8" fill="#5a5a4a">321</text><text x="509" y="188" text-anchor="middle" font-size="8" fill="#9a9a8a">2031</text>
+      <rect x="544" y="35" width="50" height="140" rx="4" fill="url(#gb1)"/><text x="569" y="30" text-anchor="middle" font-size="8" fill="#5a5a4a">413</text><text x="569" y="188" text-anchor="middle" font-size="8" fill="#9a9a8a">2033</text>
+      <text x="620" y="85" font-size="13" fill="#B8943A" font-weight="bold">+13.4%</text>
+      <text x="620" y="98" font-size="9" fill="#9a9a8a">CAGR</text>
+    </svg>
+  </div>
+
+  <div class="slbl" style="margin-top:24px">Competitive Landscape</div>
+  <div class="sh">Where Psyzen Wins the White Space</div>
+  <div class="ss">No existing platform combines AI triage, 4-tier clinical escalation, privacy-first local LLM, and structured crisis detection. This is Psyzen's defensible moat.</div>
+
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Platform</th><th>AI Triage</th><th>4-Tier Escalation</th><th>Local LLM Privacy</th><th>CBT/DBT</th><th>Crisis Detection</th><th>India-Specific</th></tr></thead>
+      <tbody>
+        <tr><td>Wysa</td><td class="cwin">✓ Strong</td><td class="cgap">✗ None</td><td class="cgap">✗ OpenAI cloud</td><td class="cwin">✓ Strong</td><td class="cmid">◑ Basic</td><td class="cmid">◑ Partial</td></tr>
+        <tr><td>Amaha</td><td class="cgap">✗ None</td><td class="cmid">◑ Manual</td><td class="cgap">✗ No</td><td class="cwin">✓ Yes</td><td class="cgap">✗ None</td><td class="cwin">✓ Yes</td></tr>
+        <tr><td>YourDOST</td><td class="cgap">✗ None</td><td class="cmid">◑ Manual</td><td class="cgap">✗ No</td><td class="cmid">◑ Limited</td><td class="cgap">✗ None</td><td class="cwin">✓ Yes</td></tr>
+        <tr><td>Practo</td><td class="cgap">✗ None</td><td class="cgap">✗ None</td><td class="cgap">✗ No</td><td class="cgap">✗ No</td><td class="cgap">✗ None</td><td class="cwin">✓ Yes</td></tr>
+        <tr><td>iCall (TISS)</td><td class="cgap">✗ None</td><td class="cmid">◑ Limited</td><td class="cmid">◑ Partial</td><td class="cgap">✗ No</td><td class="cgap">✗ None</td><td class="cwin">✓ Yes</td></tr>
+        <tr class="highlight"><td>Psyzen</td><td class="cwin">✓ Core Feature</td><td class="cwin">✓ Full 4-Tier</td><td class="cwin">✓ Local LLM</td><td class="cwin">✓ Integrated</td><td class="cwin">✓ Primary</td><td class="cwin">✓ Kerala-First</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="slbl" style="margin-top:24px">Top Keyword Opportunities</div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Keyword</th><th>Est. Monthly Searches (India)</th><th>Trend</th><th>Psyzen Strategy</th></tr></thead>
+      <tbody>
+        <tr><td>psychologist near me</td><td>1,20,000–2,00,000</td><td class="cwin">↑ Very high</td><td>Local SEO + GEO</td></tr>
+        <tr><td>online therapy India</td><td>60,000–90,000</td><td class="cwin">↑ High growth</td><td>Core SEO target</td></tr>
+        <tr><td>online psychiatrist India</td><td>25,000–40,000</td><td class="cwin">↑ High intent</td><td>High-conversion focus</td></tr>
+        <tr><td>CBT therapy India</td><td>10,000–18,000</td><td class="cmid">→ Stable-growing</td><td>Education + AEO</td></tr>
+        <tr><td>AI mental health app</td><td>8,000–15,000</td><td class="cwin">↑ Emerging fast</td><td>Category-defining content</td></tr>
+        <tr><td>anxiety treatment Kerala</td><td>5,000–12,000</td><td class="cwin">↑ Rising</td><td>Regional SEO + Local</td></tr>
+        <tr><td>What is DBT therapy</td><td>12,000–20,000</td><td class="cwin">↑ Educational query</td><td>AEO answer content</td></tr>
+        <tr><td>corporate mental health India</td><td>3,000–7,000</td><td class="cwin">↑ B2B growth</td><td>B2B sales enablement</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="hl">📍 <strong>South India leads</strong> the online mental health market (IMARC 2025). Kerala has 77%+ smartphone penetration, strong English literacy, and an educated workforce — making it the ideal launch geography before national scale. Trivandrum specifically has a large healthcare and IT professional base.</div>
+</div>
+
+<!-- ═══ PHASES ═══ -->
+<div class="sec" id="sec-phases">
+  <div class="slbl">The Strategic Blueprint</div>
+  <div class="sh">5-Phase Execution Plan</div>
+  <div class="ss">Each phase has a clear objective, budget, delivery milestones, challenges, and a structured 3-step payment plan. No phase begins until the previous one is delivered and approved. Click each phase to expand the full details.</div>
+
+  <!-- PHASE 0 -->
+  <div class="phase">
+    <div class="phase-hdr" onclick="togglePhase(0)">
+      <div class="pnum" style="background:var(--gold)">0</div>
+      <div>
+        <div class="ptitle">Brand Genesis — Build the Identity</div>
+        <div class="psubtitle">Month 1 · 4 Weeks · FlumenX Design Team</div>
+      </div>
+      <div class="pright">
+        <span class="pbudget">₹29,999</span>
+        <span class="parrow" id="arr0">▾</span>
+      </div>
+    </div>
+    <div class="phase-body" id="body0">
+      <div style="padding-top:20px">
+        <div class="fb" style="margin-bottom:20px">
+          <p><strong style="color:var(--gold2)">Why This Phase Exists First:</strong> Every downstream deliverable — website, platform UI, marketing assets, social content, app interface — must express the same visual language. Building the platform before the brand exists creates expensive rework. The IT team cannot start UI design without brand tokens. The DM team cannot post without brand assets. Brand is the foundation everything else stands on.</p>
+        </div>
+        <div class="g2">
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">📦 Recommended: Signature Package</p>
+            <div class="pkg rec">
+              <div class="pkg-tag">RECOMMENDED FOR PSYZEN</div>
+              <div class="pkg-name">Signature Brand Package</div>
+              <div class="pkg-price">₹29,999 <span>one-time investment</span></div>
+              <ul class="chklist">
+                <li><span class="dot g">✓</span>4 unique logo concepts (full creative exploration)</li>
+                <li><span class="dot g">✓</span>All formats: JPG, PNG, SVG, AI, PSD (complete source files)</li>
+                <li><span class="dot g">✓</span>Brand colors system + typography pair selection</li>
+                <li><span class="dot g">✓</span>Business card design (print-ready)</li>
+                <li><span class="dot g">✓</span>Letterhead + email signature</li>
+                <li><span class="dot g">✓</span>ID Card design</li>
+                <li><span class="dot g">✓</span>Social Media Brand Kit (all platform sizes)</li>
+                <li><span class="dot g">✓</span>2 Brochure / Profile designs</li>
+                <li><span class="dot g">✓</span>Brand Manual (Basic) — voice, tone, usage rules</li>
+                <li><span class="dot g">✓</span>Rollout support — handoff to IT + DM teams</li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">⚙️ What Happens in Each Week</p>
+            <ul class="chklist">
+              <li><span class="dot">W1</span><strong>Discovery:</strong> Brand strategy session with Meera. Target user empathy mapping. 3 mood board directions presented: Clinical Warmth / Calm Authority / Human-First</li>
+              <li><span class="dot">W2</span><strong>Concept:</strong> 4 logo concepts designed. Color palette explorations (deep teal, warm forest green, warm stone — avoiding cold blue and pastel pink). Typography pair shortlisted.</li>
+              <li><span class="dot">W3</span><strong>Refinement:</strong> Client selects direction. Logo refined to 3 variants. Full brand guidelines begin. Social media template pack design starts.</li>
+              <li><span class="dot">W4</span><strong>Delivery:</strong> Brand guidelines document (40+ pages). All source files exported. Social media template pack (12 templates). Brand brief to IT team + DM team.</li>
+            </ul>
+            <div class="wb" style="margin-top:12px">⚠️ <strong>Key Challenge:</strong> Mental health branding must balance clinical trust with human warmth. Avoid cold hospital aesthetics. Avoid overly cheerful wellness aesthetics. The visual language must say "safe, professional, human."</div>
+          </div>
+        </div>
+        <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:10px">💳 3-Step Payment Plan — Phase 0</p>
+        <div class="pay-steps">
+          <div class="pay-step"><div class="pay-pct">50%</div><div class="pay-lbl">₹14,999</div><div class="pay-when">On Project Start</div></div>
+          <div class="pay-step"><div class="pay-pct">30%</div><div class="pay-lbl">₹9,000</div><div class="pay-when">On Logo Concepts Presented (Week 2)</div></div>
+          <div class="pay-step"><div class="pay-pct">20%</div><div class="pay-lbl">₹6,000</div><div class="pay-when">On Final Delivery & Approval (Week 4)</div></div>
+        </div>
+        <div class="hl" style="margin-top:14px">✅ <strong>Phase 0 Milestone:</strong> Brand guidelines document approved by client. All source files (Figma + AI + PNG/SVG pack) delivered. Design system tokens documented and handed to IT team. Phase 1 green-lit only after this.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 1 -->
+  <div class="phase">
+    <div class="phase-hdr" onclick="togglePhase(1)">
+      <div class="pnum" style="background:var(--teal)">1</div>
+      <div>
+        <div class="ptitle">Digital Foundation — Presence Before Platform</div>
+        <div class="psubtitle">Month 2 · 4 Weeks · FlumenX Web + DM Teams</div>
+      </div>
+      <div class="pright">
+        <span class="pbudget">₹85,000 + ₹30,000/mo DM</span>
+        <span class="parrow" id="arr1">▾</span>
+      </div>
+    </div>
+    <div class="phase-body" id="body1">
+      <div style="padding-top:20px">
+        <div class="fb" style="margin-bottom:20px">
+          <p><strong style="color:var(--gold2)">Why This Phase Before Development:</strong> Launching a platform to zero awareness is starting at a massive disadvantage. A 2-month pre-launch marketing phase ensures Psyzen launches with an educated, waiting audience — not an empty waiting room. Every day of pre-launch marketing is compounding audience trust that no ad spend can buy at launch. The website creates a landing destination for all marketing activity before the platform is ready.</p>
+        </div>
+        <div class="g2">
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">🌐 Teaser Website — ₹85,000 (One-Time)</p>
+            <ul class="chklist">
+              <li><span class="dot t">✓</span>6 responsive pages: Home, How It Works, Services, About, For Professionals, Contact</li>
+              <li><span class="dot t">✓</span>Prominent waitlist email capture (above the fold on homepage)</li>
+              <li><span class="dot t">✓</span>Mobile-first design (60%+ of Kerala users on mobile)</li>
+              <li><span class="dot t">✓</span>CMS integration for blog publishing</li>
+              <li><span class="dot t">✓</span>Basic SEO setup: meta tags, sitemap, schema, Google Analytics 4</li>
+              <li><span class="dot t">✓</span>Contact form with WhatsApp integration</li>
+              <li><span class="dot t">✓</span>Page speed optimized: target &lt;2s LCP on mobile</li>
+              <li><span class="dot t">✓</span>Google Business Profile creation + verification</li>
+            </ul>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin:14px 0 10px">💳 3-Step Payment — Website</p>
+            <div class="pay-steps">
+              <div class="pay-step"><div class="pay-pct">50%</div><div class="pay-lbl">₹42,500</div><div class="pay-when">Project Start</div></div>
+              <div class="pay-step"><div class="pay-pct">30%</div><div class="pay-lbl">₹25,500</div><div class="pay-when">Design Mockup Approved</div></div>
+              <div class="pay-step"><div class="pay-pct">20%</div><div class="pay-lbl">₹17,000</div><div class="pay-when">Website Live</div></div>
+            </div>
+          </div>
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">📣 Digital Marketing Kickoff — Strategic Presence Plan</p>
+            <div class="pkg rec">
+              <div class="pkg-tag">STARTING PLAN</div>
+              <div class="pkg-name">Strategic Presence</div>
+              <div class="pkg-price">₹30,000 <span>/month</span></div>
+              <ul class="chklist">
+                <li><span class="dot t">✓</span>10 posters/month (Instagram + Facebook)</li>
+                <li><span class="dot t">✓</span>6 reels/month (education-focused, awareness-building)</li>
+                <li><span class="dot t">✓</span>Strategic storytelling content plan</li>
+                <li><span class="dot t">✓</span>Brand tone control across all platforms</li>
+                <li><span class="dot t">✓</span>GMB + Local SEO management</li>
+                <li><span class="dot t">✓</span>Community engagement (comments, DMs)</li>
+                <li><span class="dot t">✓</span>Monthly analytics report</li>
+              </ul>
+            </div>
+            <div class="wb" style="margin-top:10px">⚠️ <strong>Month 2 Priority:</strong> Social accounts setup (Instagram, LinkedIn, Facebook, YouTube). WhatsApp broadcast list started. Waitlist campaign begins. First 3 blog posts published (SEO foundation).</div>
+          </div>
+        </div>
+        <div class="hl">✅ <strong>Phase 1 Milestone:</strong> Website live with waitlist form. All social accounts active and posting. 100+ waitlist signups target. Google Business Profile verified. First blog post indexed by Google. DM content calendar for 3 months approved.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 2 -->
+  <div class="phase">
+    <div class="phase-hdr" onclick="togglePhase(2)">
+      <div class="pnum" style="background:var(--forest)">2</div>
+      <div>
+        <div class="ptitle">MVP Development — Core Platform Build</div>
+        <div class="psubtitle">Month 3–7 · 20 Weeks · IT Team Lead</div>
+      </div>
+      <div class="pright">
+        <span class="pbudget">₹10L–12L IT + ₹3.25L FlumenX</span>
+        <span class="parrow" id="arr2">▾</span>
+      </div>
+    </div>
+    <div class="phase-body" id="body2">
+      <div style="padding-top:20px">
+        <div class="fb" style="margin-bottom:20px">
+          <p><strong style="color:var(--gold2)">What This Phase Delivers:</strong> The core functional platform — patient onboarding, AI-assisted triage (Tiers 1–2), patient dashboard, doctor/social worker dashboard, appointment system, and DPDP-compliant consent management. By end of Phase 2, Psyzen can begin beta testing with real clinical partners and generate its first revenue. This is the most critical and largest phase of the entire build.</p>
+        </div>
+        <div class="g2">
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">🏗️ Modules Built in This Phase</p>
+            <ul class="chklist">
+              <li><span class="dot">M1</span><strong>Authentication System:</strong> Custom user model with role fields (patient, social worker, psychologist, clinical psychologist, psychiatrist, admin). JWT + OTP verification. Role-based access control middleware.</li>
+              <li><span class="dot">M2</span><strong>Consent Management:</strong> DPDP-compliant multi-tier consent capture. Separate consent for: AI interaction, data sharing between tiers, session recording. Immutable consent audit log. Legal review required before any user testing.</li>
+              <li><span class="dot">M3</span><strong>AI Chat Engine (Tier 1-2):</strong> Local LLM integration via Ollama (LLaMA3 8B). System prompt with triage logic, safety rules, escalation triggers. Context window management (20 turns). Basic risk flagging to trigger human review.</li>
+              <li><span class="dot">M4</span><strong>Patient Dashboard:</strong> Tier status badge, risk level indicator, next appointment, chat interface (real-time WebSocket), session history with AI summaries, appointment booking calendar, profile + consent settings.</li>
+              <li><span class="dot">M5</span><strong>Doctor/Social Worker Dashboard:</strong> Assigned patient list with tier and risk levels, AI-generated alert panel, session review interface, clinical notes editor, appointment management, tier recommendation approval.</li>
+              <li><span class="dot">M6</span><strong>Appointment System:</strong> Calendar view, slot selection and booking, conflict detection, automatic reminders (WhatsApp + email), reschedule flow.</li>
+              <li><span class="dot">M7</span><strong>Platform Website v2:</strong> Full marketing site replacing teaser, complete service pages, blog live, SEO-optimized, waitlist converted to signup flow.</li>
+            </ul>
+          </div>
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">⚠️ Phase 2 Critical Decisions & Challenges</p>
+            <ul class="chklist">
+              <li><span class="dot r">!</span><strong>Local LLM Server Setup:</strong> Client requested local LLM for DPDP privacy compliance. Ollama + LLaMA3 8B on private VPS (16GB+ RAM, GPU preferred). Budget: ₹15,000–25,000/month VPS. This must be confirmed in writing before first commit.</li>
+              <li><span class="dot r">!</span><strong>Legal Consultation:</strong> DPDP consent flows must be reviewed by a healthcare legal professional before any user-facing testing. Budget: ₹20,000–40,000 one-time legal fee.</li>
+              <li><span class="dot r">!</span><strong>Clinical Advisor Engagement:</strong> A psychiatrist or clinical psychologist must review the triage logic, tier escalation triggers, and crisis response protocols before any patient interaction goes live.</li>
+              <li><span class="dot r">!</span><strong>Video Consultation Scope:</strong> Client mentioned video as a consultation mode. The base proposal lists video as Phase 4. This must be confirmed in writing — either in base scope or explicitly deferred.</li>
+            </ul>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin:14px 0 10px">🧑‍💻 Team Required</p>
+            <ul class="chklist">
+              <li><span class="dot g">→</span>1 Tech Lead / Project Manager</li>
+              <li><span class="dot g">→</span>1 UI/UX Designer (contract)</li>
+              <li><span class="dot g">→</span>2 Frontend Developers (Next.js)</li>
+              <li><span class="dot g">→</span>1 Backend Developer (Django)</li>
+              <li><span class="dot g">→</span>1 AI Engineer (local LLM — dedicated, non-negotiable)</li>
+            </ul>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin:14px 0 10px">📣 FlumenX Services Running This Phase</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <div class="pkg" style="flex:1;min-width:160px;padding:12px 14px">
+                <div class="pkg-name">DM: Strategic Presence</div>
+                <div class="pkg-price" style="font-size:18px">₹30,000 <span>/mo × 5mo</span></div>
+                <div style="font-size:12px;color:var(--muted)">Total: ₹1,50,000</div>
+              </div>
+              <div class="pkg" style="flex:1;min-width:160px;padding:12px 14px">
+                <div class="pkg-name">SAG·EO Core (starts M3)</div>
+                <div class="pkg-price" style="font-size:18px">₹35,000 <span>/mo × 5mo</span></div>
+                <div style="font-size:12px;color:var(--muted)">Total: ₹1,75,000</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin:16px 0 10px">💳 3-Step Payment Plan — IT Development (₹11L base)</p>
+        <div class="pay-steps">
+          <div class="pay-step"><div class="pay-pct">50%</div><div class="pay-lbl">₹5,50,000</div><div class="pay-when">Project Kickoff — Month 3 Start</div></div>
+          <div class="pay-step"><div class="pay-pct">30%</div><div class="pay-lbl">₹3,30,000</div><div class="pay-when">First Demo — Month 5 (Patient Dashboard Working)</div></div>
+          <div class="pay-step"><div class="pay-pct">20%</div><div class="pay-lbl">₹2,20,000</div><div class="pay-when">Full MVP Delivery — Month 7 (All Modules Live)</div></div>
+        </div>
+        <div class="hl" style="margin-top:14px">✅ <strong>Phase 2 Milestone:</strong> End-to-end flow working — patient registers, completes consent, chats with AI, receives Tier 1/2 assignment, social worker sees alert, schedules appointment. Beta tested with 5–10 clinical partners. First revenue opportunity from pilot clinic contracts (₹50,000–1,00,000/clinic/month).</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 3 -->
+  <div class="phase">
+    <div class="phase-hdr" onclick="togglePhase(3)">
+      <div class="pnum" style="background:var(--rose)">3</div>
+      <div>
+        <div class="ptitle">AI Enhancement — Intelligence, RAG & Full 4-Tier Triage</div>
+        <div class="psubtitle">Month 7–9 · 12 Weeks · IT Team + Clinical Advisor</div>
+      </div>
+      <div class="pright">
+        <span class="pbudget">₹6L–8L IT + ₹2.55L FlumenX</span>
+        <span class="parrow" id="arr3">▾</span>
+      </div>
+    </div>
+    <div class="phase-body" id="body3">
+      <div style="padding-top:20px">
+        <div class="fb" style="margin-bottom:20px">
+          <p><strong style="color:var(--gold2)">What This Phase Delivers:</strong> The intelligence layer — RAG-powered knowledge retrieval, Personality Cluster A/B detection, full crisis detection system, all 4 tiers active, admin dashboard, and real-time emergency escalation. This is the phase that transforms Psyzen from an appointment-booking chatbot into a clinically intelligent triage platform. It requires a clinical advisor's active involvement throughout. Phase 3 is where the platform becomes genuinely defensible against competitors.</p>
+        </div>
+        <div class="g2">
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">🧠 Modules Built in This Phase</p>
+            <ul class="chklist">
+              <li><span class="dot r">M1</span><strong>RAG Knowledge Pipeline:</strong> Document ingestion (CBT protocols, DBT workbooks, clinical guidelines in PDF/DOCX). Text chunking with 500-char chunks. Local embeddings via SentenceTransformers (all-MiniLM-L6-v2 — no external API). ChromaDB vector store (self-hosted). Similarity search with top-5 retrieval. All patient data stays on your server.</li>
+              <li><span class="dot r">M2</span><strong>Personality Cluster A/B Detection:</strong> Prompt-engineered conversation analysis to identify Cluster A (paranoid, schizoid, schizotypal) vs Cluster B (antisocial, borderline, histrionic, narcissistic) behavioral patterns. Outputs structured risk signals for clinical review — never a direct diagnosis. Validated by clinical advisor before live use.</li>
+              <li><span class="dot r">M3</span><strong>Crisis Detection System:</strong> Multi-layer detection — Layer 1: keyword/phrase detection (fast, synchronous). Layer 2: LLM risk scoring (structured JSON output: LOW/MEDIUM/HIGH/CRITICAL). Layer 3: session history pattern analysis. CRITICAL trigger: conversation paused, psychiatrist/admin alerted via WebSocket, crisis resources displayed, incident logged. Must be validated by clinical advisor with 50+ scenario scripts before going live.</li>
+              <li><span class="dot r">M4</span><strong>Full 4-Tier Escalation:</strong> Tier 1 (AI + Social Worker), Tier 2 (Social Worker + Psychologist), Tier 3 (Clinical Psychologist), Tier 4 (Psychiatrist + medication tracking). AI continuously reassesses tier assignment. Manual override by clinicians.</li>
+              <li><span class="dot r">M5</span><strong>Admin Dashboard:</strong> Full platform overview, user management, AI monitoring, knowledge base management, emergency escalation control, audit logs, system analytics.</li>
+              <li><span class="dot r">M6</span><strong>Analytics & Reporting:</strong> Patient activity analytics, risk trend dashboards, AI insight generation, clinical outcome tracking, progress reports for each patient.</li>
+            </ul>
+          </div>
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">🚨 Phase 3 Non-Negotiables</p>
+            <ul class="chklist">
+              <li><span class="dot r">!</span><strong>Crisis Detection Liability Protocol:</strong> Before Phase 3 goes live, the legal response protocol must be documented — what happens if the psychiatrist doesn't respond to a CRITICAL alert within X minutes? Who bears liability? This requires legal documentation signed by Psyzen's operating entity.</li>
+              <li><span class="dot r">!</span><strong>RAG Knowledge Curation:</strong> The CBT/DBT protocols, clinical guidelines, and crisis protocols in the knowledge base must be curated by a licensed mental health professional. Generic document upload produces generic — and potentially harmful — AI responses. This is not optional.</li>
+              <li><span class="dot r">!</span><strong>Telemedicine Guidelines 2020 Compliance:</strong> All clinical interactions on the platform must comply with India's Telemedicine Practice Guidelines. Legal review before Phase 3 launch.</li>
+            </ul>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin:14px 0 10px">📣 FlumenX Services This Phase</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap">
+              <div class="pkg rec" style="flex:1;min-width:160px;padding:12px 14px">
+                <div class="pkg-tag">UPGRADE</div>
+                <div class="pkg-name">DM: Authority Builder</div>
+                <div class="pkg-price" style="font-size:18px">₹38,000 <span>/mo × 3mo</span></div>
+                <div style="font-size:12px;color:var(--muted)">Total: ₹1,14,000</div>
+              </div>
+              <div class="pkg" style="flex:1;min-width:160px;padding:12px 14px">
+                <div class="pkg-name">SAG·EO Core</div>
+                <div class="pkg-price" style="font-size:18px">₹35,000 <span>/mo × 3mo</span></div>
+                <div style="font-size:12px;color:var(--muted)">Total: ₹1,05,000</div>
+              </div>
+              <div class="pkg" style="flex:1;min-width:160px;padding:12px 14px">
+                <div class="pkg-name">Ads: Launch Plan</div>
+                <div class="pkg-price" style="font-size:18px">₹12,000 <span>/mo × 3mo + ad spend</span></div>
+                <div style="font-size:12px;color:var(--muted)">Total: ₹36,000 + spend</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin:16px 0 10px">💳 3-Step Payment Plan — Phase 3 IT (₹7L base)</p>
+        <div class="pay-steps">
+          <div class="pay-step"><div class="pay-pct">50%</div><div class="pay-lbl">₹3,50,000</div><div class="pay-when">Phase 3 Kickoff — Month 7</div></div>
+          <div class="pay-step"><div class="pay-pct">30%</div><div class="pay-lbl">₹2,10,000</div><div class="pay-when">RAG + Crisis Demo — Month 8</div></div>
+          <div class="pay-step"><div class="pay-pct">20%</div><div class="pay-lbl">₹1,40,000</div><div class="pay-when">Full 4-Tier Live + Clinical Validated — Month 9</div></div>
+        </div>
+        <div class="hl" style="margin-top:14px">✅ <strong>Phase 3 Milestone:</strong> RAG tested with 50+ clinical scenarios. Crisis detection validated by clinical advisor. All 4 tiers operational. Platform soft-launches to first paying institutional clients. DM shifts to platform launch mode. B2B corporate wellness pitching begins.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHASE 4 -->
+  <div class="phase">
+    <div class="phase-hdr" onclick="togglePhase(4)">
+      <div class="pnum" style="background:var(--gold2)">4</div>
+      <div>
+        <div class="ptitle">Voice, Video & Scale — Full Platform Public Launch</div>
+        <div class="psubtitle">Month 9–12 · 12 Weeks · IT Team + Full FlumenX Suite</div>
+      </div>
+      <div class="pright">
+        <span class="pbudget">₹4L–6L IT + ₹3.72L FlumenX</span>
+        <span class="parrow" id="arr4">▾</span>
+      </div>
+    </div>
+    <div class="phase-body" id="body4">
+      <div style="padding-top:20px">
+        <div class="fb" style="margin-bottom:20px">
+          <p><strong style="color:var(--gold2)">What This Phase Delivers:</strong> The complete multi-modal platform — voice consultations, video sessions, Malayalam language support, advanced analytics, full security audit, and the marketing push that takes Psyzen from beta to public. By this stage, Phase 2 revenue from pilot clinics should be partially funding Phase 4 development. The business model is being validated while the product is being completed.</p>
+        </div>
+        <div class="g2">
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">🎙️ Modules Built in This Phase</p>
+            <ul class="chklist">
+              <li><span class="dot g">M1</span><strong>Voice Interface:</strong> Speech-to-Text using Whisper medium.en (self-hosted via faster-whisper — no external API, fully private). Text-to-Speech via Coqui TTS (open-source, local). WebRTC audio streaming via mediasoup or simple-peer. Target: &lt;2s end-to-end voice response latency.</li>
+              <li><span class="dot g">M2</span><strong>Video Consultation:</strong> Scheduled video sessions using Daily.co SDK or Agora SDK. Doctor initiates, patient joins via secure link. Optional session recording with separate consent flow. Post-session notes attached automatically.</li>
+              <li><span class="dot g">M3</span><strong>Malayalam Language Support:</strong> Mistral 7B multilingual model for Malayalam conversations. Translation layer for AI responses. UI language toggle (English / Malayalam). Critical for Kerala market penetration beyond English-fluent users.</li>
+              <li><span class="dot g">M4</span><strong>Advanced Analytics & BI:</strong> Platform-wide dashboards: patient outcomes tracking, session analytics, risk trend analysis, AI performance metrics, clinical team workload. Exportable reports for institutional clients.</li>
+              <li><span class="dot g">M5</span><strong>Security Audit & Hardening:</strong> External penetration testing. Encryption audit. RBAC validation. Data retention policy implementation. DPDP compliance final review. Load testing to 100+ concurrent users. This is a dedicated 3-week security phase — not an afterthought.</li>
+              <li><span class="dot g">M6</span><strong>Platform Website v3:</strong> Full SEO-optimized site. Patient + professional dedicated landing pages. Blog fully active (20+ articles from DM team). Conversion-optimized signup flow.</li>
+            </ul>
+          </div>
+          <div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">💡 Revenue Funding Phase 4</p>
+            <div class="card" style="background:#fffbef;border-color:var(--gold);margin-bottom:12px">
+              <p>By Month 9, the MVP is live and Phase 3 has delivered clinical validation. Psyzen can realistically have 3+ pilot institutional clients paying ₹50,000–1,00,000/month. That's ₹1,50,000–3,00,000/month in revenue — which offsets a significant portion of Phase 4 development costs.</p>
+            </div>
+            <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:10px">📣 FlumenX Services This Phase</p>
+            <div style="display:flex;flex-direction:column;gap:10px">
+              <div class="pkg" style="padding:12px 14px">
+                <div class="pkg-name">DM: Authority Builder</div>
+                <div class="pkg-price" style="font-size:18px">₹38,000 <span>/mo × 4mo = ₹1,52,000</span></div>
+              </div>
+              <div class="pkg" style="padding:12px 14px">
+                <div class="pkg-name">SAG·EO Core</div>
+                <div class="pkg-price" style="font-size:18px">₹35,000 <span>/mo × 4mo = ₹1,40,000</span></div>
+              </div>
+              <div class="pkg" style="padding:12px 14px">
+                <div class="pkg-name">Ads: Scale Plan</div>
+                <div class="pkg-price" style="font-size:18px">₹20,000 <span>/mo × 4mo + ad spend = ₹80,000</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin:16px 0 10px">💳 3-Step Payment Plan — Phase 4 IT (₹5L base)</p>
+        <div class="pay-steps">
+          <div class="pay-step"><div class="pay-pct">50%</div><div class="pay-lbl">₹2,50,000</div><div class="pay-when">Phase 4 Kickoff — Month 9</div></div>
+          <div class="pay-step"><div class="pay-pct">30%</div><div class="pay-lbl">₹1,50,000</div><div class="pay-when">Voice + Video Demo — Month 11</div></div>
+          <div class="pay-step"><div class="pay-pct">20%</div><div class="pay-lbl">₹1,00,000</div><div class="pay-when">Full Launch + Security Audit Complete</div></div>
+        </div>
+        <div class="hl" style="margin-top:14px">✅ <strong>Month 12 Target:</strong> Voice + video consultations live. Malayalam support active. Security audit complete. Full public marketing launch executes. 500+ registered users. 5+ institutional clients. Platform generating consistent monthly revenue.</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══ BRAND ═══ -->
+<div class="sec" id="sec-brand">
+  <div class="slbl">Brand Architecture</div>
+  <div class="sh">Building Trust in a Trust-Sensitive Market</div>
+  <div class="ss">Mental health is a category where brand trust outweighs any feature. A user will not share their most vulnerable moments with a platform they don't recognize. Every brand decision must earn that trust before asking for anything in return.</div>
+  <div class="g2">
+    <div class="card"><div class="chd"><div class="ib if">🧠</div><div><div class="cl">Brand Positioning</div><div class="ct">The Trusted Guide, Not the Replacement</div></div></div><p>Psyzen is not a therapy replacement. It is the intelligent guide that helps people understand their mental health and find the right level of human support. Core positioning: <em>"Your first step toward the right care."</em> This reduces stigma, lowers the barrier to entry, and positions AI as an enabler of human care — not a substitute for it.</p></div>
+    <div class="card"><div class="chd"><div class="ib ig">🎨</div><div><div class="cl">Visual Direction</div><div class="ct">Calm Authority — Not Clinical, Not Casual</div></div></div><p>Avoid cold hospital white + clinical blue (intimidating). Avoid bright pastels + playful icons (trivialises mental health). The recommended direction: deep teal + warm cream + measured gold accents. Soft geometric forms. Humanist typeface for warmth, serif for authority. Think: a trusted professional who actually listens.</p></div>
+  </div>
+  <div class="card"><div class="chd"><div class="ib it">🗣️</div><div><div class="cl">Messaging Framework</div><div class="ct">What Psyzen Says — and How It Says It</div></div></div>
+    <table class="tbl" style="margin-top:12px">
+      <thead><tr><th>Audience</th><th>Core Message</th><th>Tone</th><th>Primary Channel</th></tr></thead>
+      <tbody>
+        <tr><td>General Public</td><td>"You don't need to figure it out alone."</td><td>Warm, accessible, non-clinical</td><td>Instagram, Google Ads</td></tr>
+        <tr><td>Clinicians</td><td>"AI that works with you, not instead of you."</td><td>Professional, evidence-based</td><td>LinkedIn, WhatsApp</td></tr>
+        <tr><td>Corporate HR</td><td>"Give your team the mental health support they deserve."</td><td>ROI-focused, empathetic</td><td>LinkedIn, Email, Events</td></tr>
+        <tr><td>Students</td><td>"Talk first. Understand what you're feeling. Get the right help."</td><td>Casual, relatable, stigma-free</td><td>Instagram, YouTube Shorts</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══ MARKETING ═══ -->
+<div class="sec" id="sec-marketing">
+  <div class="slabel">Go-to-Market Strategy</div>
+  <div class="sh">Education → Desire → Funnel</div>
+  <div class="ss">Mental health requires education before conversion. The strategy runs in 3 stages that cannot be reversed or skipped. Creating the category in the user's mind must happen before selling the product to them.</div>
+  <div class="fb"><p><strong style="color:var(--gold2)">The Core Challenge:</strong> You can't run "Book a therapy session" ads to people who don't believe they need therapy and don't understand what triage means. The first 3 months of marketing are entirely about <strong>creating the category, not selling the product.</strong></p></div>
+  <div class="card"><div class="chd"><div class="ib it">📚</div><div><div class="cl">Stage 1 · Month 2–4</div><div class="ct">Education & Awareness — "The Problem Exists"</div></div></div>
+    <div class="g2" style="margin-top:12px">
+      <div><strong style="font-size:13px;color:var(--forest)">Content Pillars</strong>
+        <ul class="chklist"><li><span class="dot t">1</span>What is CBT/DBT? (Carousel, blog, Short) — explains the therapeutic frameworks Psyzen uses</li><li><span class="dot t">2</span>Signs you need more than journaling (Reel) — creates problem awareness</li><li><span class="dot t">3</span>Psychologist vs Psychiatrist — what's the difference? (AEO article)</li><li><span class="dot t">4</span>Anxiety vs stress — where is the line? (Poll + infographic)</li><li><span class="dot t">5</span>Mental health by the numbers: Kerala & India (data post)</li></ul>
+      </div>
+      <div><strong style="font-size:13px;color:var(--forest)">Channel Strategy</strong>
+        <ul class="chklist"><li><span class="dot t">→</span>Instagram: visual education, Reels (primary platform for 18–35 segment)</li><li><span class="dot t">→</span>LinkedIn: professional credibility, thought leadership (clinicians + HR)</li><li><span class="dot t">→</span>Blog: SEO + AEO content foundation (4 articles/month)</li><li><span class="dot t">→</span>WhatsApp broadcast: warm community, weekly mental health tip</li><li><span class="dot t">→</span>Local media/PR: Trivandrum startup story</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="card"><div class="chd"><div class="ib ig">💡</div><div><div class="cl">Stage 2 · Month 4–7</div><div class="ct">Brand Building & Desire — "A Better Way Exists"</div></div></div>
+    <div class="g2" style="margin-top:12px">
+      <div><strong style="font-size:13px;color:var(--forest)">Key Activities</strong>
+        <ul class="chklist"><li><span class="dot g">→</span>"Be among the first 500" waitlist campaign — exclusivity and urgency</li><li><span class="dot g">→</span>Founder's story + Clinical Advisor thought leadership posts</li><li><span class="dot g">→</span>Community building (WhatsApp/Telegram mental health support group)</li><li><span class="dot g">→</span>BNI network activation — Meera's warm network (50–100 high-trust leads)</li><li><span class="dot g">→</span>Pilot clinic partnership announcement (authority signal)</li></ul>
+      </div>
+      <div><strong style="font-size:13px;color:var(--forest)">Stage 2 KPIs</strong>
+        <ul class="chklist"><li><span class="dot g">✓</span>500+ waitlist registrations</li><li><span class="dot g">✓</span>1,000+ Instagram followers</li><li><span class="dot g">✓</span>3–5 corporate wellness leads in pipeline</li><li><span class="dot g">✓</span>1 media mention (Kerala/national)</li><li><span class="dot g">✓</span>1 signed pilot clinic agreement</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="card"><div class="chd"><div class="ib if">🚀</div><div><div class="cl">Stage 3 · Month 7–12</div><div class="ct">Launch & Lead Generation — "Join Psyzen"</div></div></div>
+    <div class="g2" style="margin-top:12px">
+      <div><strong style="font-size:13px;color:var(--forest)">Platform Launch</strong>
+        <ul class="chklist"><li><span class="dot">→</span>Platform launch event (virtual + Trivandrum)</li><li><span class="dot">→</span>Paid Meta + Google ads begin (Launch Plan: ₹12,000/mo management + ad spend)</li><li><span class="dot">→</span>Referral program: "Refer a friend, get a free session credit"</li><li><span class="dot">→</span>YouTube Shorts series: "1-minute mental health check"</li><li><span class="dot">→</span>Micro-influencer collaboration (mental health voices, 10K–50K followers)</li></ul>
+      </div>
+      <div><strong style="font-size:13px;color:var(--forest)">Traditional Outreach</strong>
+        <ul class="chklist"><li><span class="dot">→</span>College mental health awareness talks + waitlist signup</li><li><span class="dot">→</span>HR conference speaking/sponsorship (Trivandrum + Kochi)</li><li><span class="dot">→</span>Hospital + clinic direct outreach (B2B institutional sales)</li><li><span class="dot">→</span>Newspaper/magazine feature pitch (Mathrubhumi, YourStory Kerala)</li><li><span class="dot">→</span>Radio + podcast interviews</li></ul>
+      </div>
+    </div>
+  </div>
+  <div class="hl">📊 <strong>Ad Budget Guidance:</strong> Start Month 7 at ₹15,000–20,000/month ad spend. Measure CAC (Cost to Acquire a Customer) in Month 8. Only scale to ₹40,000–60,000/month after CAC is known and unit economics make sense. Never scale ad spend before understanding acquisition economics.</div>
+</div>
+
+<!-- ═══ ROADMAP ═══ -->
+<div class="sec" id="sec-roadmap">
+  <div class="slbl">Timeline Intelligence</div>
+  <div class="sh">12-Month · 90-Day · 30-Day Roadmaps</div>
+
+  <div class="card" style="padding:22px 24px;overflow-x:auto">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:16px;font-weight:600;color:var(--forest);margin-bottom:4px">12-Month Activity Roadmap</div>
+    <div style="font-size:11.5px;color:var(--muted);margin-bottom:18px">All streams run in parallel. Brand starts Month 1. DM and Website start Month 2. IT starts Month 3. SAG·EO starts Month 3.</div>
+    <div style="overflow-x:auto">
+    <table style="border-collapse:collapse;font-size:11px;min-width:750px;width:100%">
+      <tr>
+        <td style="padding:5px 10px;font-weight:700;width:100px;color:var(--forest)">Stream</td>
+        <td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M1</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M2</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M3</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M4</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M5</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M6</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M7</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M8</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M9</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M10</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M11</td><td style="text-align:center;padding:3px;width:52px;font-weight:600;color:var(--muted);font-size:10px">M12</td>
+      </tr>
+      <tr>
+        <td style="padding:4px 10px;font-weight:600;color:var(--gold)">Branding</td>
+        <td style="padding:2px"><div style="background:var(--gold);height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:700">Core</div></td>
+        <td style="padding:2px"><div style="background:var(--gold);height:24px;border-radius:4px;opacity:.35"></div></td>
+        <td colspan="10" style="padding:2px"><div style="background:#f5ead0;height:24px;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:9px;color:#8a7040">Ongoing brand support →</div></td>
+      </tr>
+      <tr>
+        <td style="padding:4px 10px;font-weight:600;color:var(--teal)">Website</td>
+        <td style="padding:2px"></td>
+        <td style="padding:2px"><div style="background:var(--teal);height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:700">v1</div></td>
+        <td colspan="4" style="padding:2px"></td>
+        <td style="padding:2px"><div style="background:var(--teal);height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:700">v2</div></td>
+        <td colspan="4" style="padding:2px"></td>
+        <td style="padding:2px"><div style="background:var(--teal);height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:700">v3</div></td>
+      </tr>
+      <tr>
+        <td style="padding:4px 10px;font-weight:600;color:var(--forest2)">DM</td>
+        <td style="padding:2px"></td>
+        <td style="padding:2px"><div style="background:var(--forest2);height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px">Pre-Launch</div></td>
+        <td colspan="4" style="padding:2px"><div style="background:var(--forest2);height:24px;border-radius:4px;opacity:.75;display:flex;align-items:center;padding-left:8px;font-size:9px;color:#fff">Education →</div></td>
+        <td style="padding:2px"><div style="background:var(--forest2);height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px;font-weight:700">Launch</div></td>
+        <td colspan="5" style="padding:2px"><div style="background:var(--forest2);height:24px;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:9px;color:#fff">Growth phase →</div></td>
+      </tr>
+      <tr>
+        <td style="padding:4px 10px;font-weight:600;color:var(--forest)">IT Dev</td>
+        <td colspan="2" style="padding:2px"></td>
+        <td colspan="5" style="padding:2px"><div style="background:var(--forest);height:24px;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:9px;color:#fff">Phase 2: MVP Development →</div></td>
+        <td colspan="3" style="padding:2px"><div style="background:var(--rose);height:24px;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:9px;color:#fff">Phase 3: AI →</div></td>
+        <td colspan="2" style="padding:2px"><div style="background:var(--gold);height:24px;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:9px;color:#fff">Phase 4 →</div></td>
+      </tr>
+      <tr>
+        <td style="padding:4px 10px;font-weight:600;color:#8b7355">SAG·EO</td>
+        <td colspan="2" style="padding:2px"></td>
+        <td style="padding:2px"><div style="background:#8b7355;height:24px;border-radius:4px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:9px">Start</div></td>
+        <td colspan="9" style="padding:2px"><div style="background:#8b7355;height:24px;border-radius:4px;display:flex;align-items:center;padding-left:8px;font-size:9px;color:#fff">Ongoing SAG·EO authority build →</div></td>
+      </tr>
+    </table>
+    </div>
+  </div>
+
+  <div class="slbl" style="margin-top:28px">90-Day Kickstart</div>
+  <div class="sh">The First 90 Days — Week by Week</div>
+  <div class="tl">
+    <div class="tli"><div class="tldot"></div><div class="tlm">Week 1–2</div><div class="tlt">Brand Strategy + Logo Concepts Begin</div><div class="tld">Stakeholder alignment meeting. Positioning workshop with Meera. 3 mood board directions. Logo design begins. Client provides clinical context, reference materials, vision inputs to design team.</div></div>
+    <div class="tli"><div class="tldot" style="background:var(--gold)"></div><div class="tlm">Week 3–4</div><div class="tlt">Brand Identity Approved + Digital Setup</div><div class="tld">Logo + brand guidelines delivered and approved. Domain registered, hosting setup. Social media accounts created (Instagram, LinkedIn, Facebook, YouTube). Teaser website wireframe begins.</div></div>
+    <div class="tli"><div class="tldot" style="background:var(--teal)"></div><div class="tlm">Week 5–6</div><div class="tlt">Teaser Website Live + Content Publishing Starts</div><div class="tld">Website with waitlist form live. Posting 3x/week on social. First blog article published and indexed. WhatsApp broadcast list started. DM 12-week content calendar approved by Anoop + Meera.</div></div>
+    <div class="tli"><div class="tldot" style="background:var(--gold)"></div><div class="tlm">Week 7–8</div><div class="tlt">IT Team Onboarded + Architecture Locked</div><div class="tld">Tech lead engaged. Requirements document complete. Local LLM decision confirmed in writing. Development environment set up. PostgreSQL schema designed. Legal consultation on consent flows booked.</div></div>
+    <div class="tli"><div class="tldot"></div><div class="tlm">Week 9–10</div><div class="tlt">UI/UX Design Sprint + SAG·EO Foundation</div><div class="tld">UI/UX designer starts on patient dashboard and AI chat interface. SAG·EO Core plan activated — keyword research, technical SEO audit on teaser site, schema markup. 50+ waitlist signups target.</div></div>
+    <div class="tli"><div class="tldot" style="background:var(--teal)"></div><div class="tlm">Week 11–12</div><div class="tlt">First UI Review + Backend Framework Live</div><div class="tld">First patient dashboard screens reviewed with Meera. Django backend framework deployed. PostgreSQL schema live. 100+ waitlist signups. Legal consent flow review meeting booked.</div></div>
+    <div class="tli"><div class="tldot" style="background:var(--gold)"></div><div class="tlm">Day 90 — Checkpoint</div><div class="tlt">Foundation Complete — Development Underway — Audience Growing</div><div class="tld">Brand approved ✓ Website live ✓ 100+ waitlist ✓ Social accounts active ✓ Development 25% complete ✓ Legal consultation done ✓ SAG·EO active ✓</div></div>
+  </div>
+
+  <div class="slbl" style="margin-top:28px">30-Day Sprint</div>
+  <div class="sh">Month 1 — Four-Week Focus</div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Week</th><th>IT / Tech</th><th>Brand / Design</th><th>Client Responsibilities</th></tr></thead>
+      <tbody>
+        <tr><td>Week 1</td><td>Kickoff meeting, requirements, server planning</td><td>Brand positioning workshop, mood boards, logo concepts begin</td><td>Vision document, clinical brief, reference materials provided</td></tr>
+        <tr><td>Week 2</td><td>Tech stack confirmed, domain registered, dev environment</td><td>3 logo concepts presented, color palette directions</td><td>Logo feedback, clinical advisor contact info shared</td></tr>
+        <tr><td>Week 3</td><td>Brand assets received, component library framework started</td><td>Brand guidelines finalized, social media template pack designed</td><td>Brand guideline approval, social media bio copy approved</td></tr>
+        <tr><td>Week 4</td><td>Teaser site wireframe done, hosting configured</td><td>Teaser site design complete, content calendar drafted</td><td>Website copy review, waitlist CTA text approved</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══ BUDGET ═══ -->
+<div class="sec" id="sec-budget">
+  <div class="slbl">Investment Architecture</div>
+  <div class="sh">Phase-Based Budget — Affordable, Validated, Scalable</div>
+  <div class="ss">All pricing uses official FlumenX package rates. Budget is structured by phase — not by month — giving Psyzen maximum capital control. Each phase includes a 3-step payment structure: 50% advance / 30% first demo / 20% on delivery.</div>
+
+  <!-- FLUMENX PACKAGES -->
+  <div class="slbl">FlumenX Service Packages</div>
+
+  <div class="g4">
+    <div>
+      <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--gold);margin-bottom:10px">BRANDING (ONE-TIME)</p>
+      <div class="pkg" style="border-color:var(--border)"><div class="pkg-name">Starter</div><div class="pkg-price">₹9,999</div><div style="font-size:11px;color:var(--muted)">2 concepts · Basic formats · No manual</div></div>
+      <div class="pkg" style="border-color:var(--border)"><div class="pkg-name">Pro</div><div class="pkg-price">₹18,999</div><div style="font-size:11px;color:var(--muted)">3 concepts · +AI format · 1 brochure</div></div>
+      <div class="pkg rec"><div class="pkg-tag">RECOMMENDED</div><div class="pkg-name">Signature</div><div class="pkg-price">₹29,999</div><div style="font-size:11px;color:var(--muted)">4 concepts · All formats · Brand manual</div></div>
+      <div class="pkg" style="border-color:var(--border)"><div class="pkg-name">Master Brand</div><div class="pkg-price">₹45,000</div><div style="font-size:11px;color:var(--muted)">5 concepts · Full source · Complete manual</div></div>
+    </div>
+    <div>
+      <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--gold);margin-bottom:10px">DIGITAL MARKETING (MONTHLY)</p>
+      <div class="pkg" style="border-color:var(--border)"><div class="pkg-name">Strategic Presence</div><div class="pkg-price">₹30,000 <span>/mo</span></div><div style="font-size:11px;color:var(--muted)">10 posters · 6 reels · GMB + local SEO</div></div>
+      <div class="pkg rec"><div class="pkg-tag">BEST VALUE</div><div class="pkg-name">Authority Builder</div><div class="pkg-price">₹38,000 <span>/mo</span></div><div style="font-size:11px;color:var(--muted)">12 posters · 8 reels · Founder content · Advanced GMB</div></div>
+      <div class="pkg" style="border-color:var(--border)"><div class="pkg-name">Ecosystem Growth</div><div class="pkg-price">₹50,000 <span>/mo</span></div><div style="font-size:11px;color:var(--muted)">15 posters · 10 reels · Lead nurturing</div></div>
+    </div>
+    <div>
+      <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--gold);margin-bottom:10px">SAG·EO (MONTHLY)</p>
+      <div class="pkg" style="border-color:var(--border)"><div class="pkg-name">SAG-EO Core</div><div class="pkg-price">₹35,000 <span>/mo</span></div><div style="font-size:11px;color:var(--muted)">50Q inventory · 5 answer pages/mo · Monthly AI visibility report</div></div>
+      <div class="pkg rec"><div class="pkg-tag">BEST VALUE</div><div class="pkg-name">SAG-EO Scale</div><div class="pkg-price">₹55,000 <span>/mo</span></div><div style="font-size:11px;color:var(--muted)">150Q · 10 answer pages/mo · Bi-weekly report</div></div>
+      <div class="pkg" style="border-color:var(--border)"><div class="pkg-name">SAG-EO Dominance</div><div class="pkg-price">₹85,000 <span>/mo</span></div><div style="font-size:11px;color:var(--muted)">Unlimited Q · 20 pages/mo · Weekly AI visibility</div></div>
+    </div>
+    <div>
+      <p style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--gold);margin-bottom:10px">ADS / PERFORMANCE (MONTHLY + AD SPEND)</p>
+      <div class="pkg" style="border-color:var(--border)"><div class="pkg-name">Launch</div><div class="pkg-price">₹12,000 <span>/mo + spend</span></div><div style="font-size:11px;color:var(--muted)">Search + display · 3 ad variants · Weekly optimization</div></div>
+      <div class="pkg rec"><div class="pkg-tag">BEST VALUE</div><div class="pkg-name">Scale</div><div class="pkg-price">₹20,000 <span>/mo + spend</span></div><div style="font-size:11px;color:var(--muted)">Multi-channel · 6 variants · Daily optimization · CRO</div></div>
+      <div class="pkg" style="border-color:var(--border)"><div class="pkg-name">Dominate</div><div class="pkg-price">₹35,000 <span>/mo + spend</span></div><div style="font-size:11px;color:var(--muted)">Full-funnel · 12+ variants · Real-time optimization</div></div>
+    </div>
+  </div>
+
+  <!-- PHASE BUDGET TABLE -->
+  <div class="slbl" style="margin-top:10px">Phase-Based Total Budget</div>
+  <div class="sh">What You Invest, When, and What You Get</div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Phase</th><th>Timeline</th><th>IT / Dev Cost</th><th>FlumenX Services</th><th>Phase Total</th><th>Payment Structure</th></tr></thead>
+      <tbody>
+        <tr><td>Phase 0 — Brand Genesis</td><td>Month 1</td><td>—</td><td>Branding: ₹29,999 (Signature)</td><td>₹29,999</td><td>50% / 30% / 20%</td></tr>
+        <tr><td>Phase 1 — Digital Foundation</td><td>Month 2</td><td>Website: ₹85,000</td><td>DM Strategic Presence: ₹30,000/mo</td><td>₹1,15,000</td><td>50% / 30% / 20%</td></tr>
+        <tr><td>Phase 2 — MVP Development</td><td>Month 3–7 (5 months)</td><td>₹10,00,000–12,00,000</td><td>DM ₹30K + SAG·EO Core ₹35K = ₹65K/mo × 5 = ₹3,25,000</td><td>₹13,25,000–15,25,000</td><td>50% / 30% / 20%</td></tr>
+        <tr><td>Phase 3 — AI Enhancement</td><td>Month 7–9 (3 months)</td><td>₹6,00,000–8,00,000</td><td>DM Auth ₹38K + SAG·EO ₹35K + Ads ₹12K = ₹85K/mo × 3 = ₹2,55,000</td><td>₹8,55,000–10,55,000</td><td>50% / 30% / 20%</td></tr>
+        <tr><td>Phase 4 — Voice + Scale</td><td>Month 9–12 (4 months)</td><td>₹4,00,000–6,00,000</td><td>DM Auth ₹38K + SAG·EO ₹35K + Ads Scale ₹20K = ₹93K/mo × 4 = ₹3,72,000</td><td>₹7,72,000–9,72,000</td><td>50% / 30% / 20%</td></tr>
+        <tr class="highlight"><td>Year 1 Total</td><td>12 months</td><td>₹20,85,000–26,85,000</td><td>₹10,31,999</td><td>₹31,16,999–37,16,999</td><td>Phase-based payment</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PAYMENT TERMS -->
+  <div class="slbl" style="margin-top:18px">Official Payment Terms</div>
+  <div class="g2">
+    <div class="card">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--forest);margin-bottom:14px">🖨️ Branding Projects (One-Time)</h3>
+      <ul class="chklist">
+        <li><span class="dot g">✓</span><strong>50% advance payment</strong> required to initiate the project</li>
+        <li><span class="dot g">✓</span><strong>30% payment</strong> on first concept/demo presentation</li>
+        <li><span class="dot g">✓</span><strong>20% balance payment</strong> due upon final delivery and approval</li>
+        <li><span class="dot g">✓</span>Source files released only after full payment</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3 style="font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:600;color:var(--forest);margin-bottom:14px">📅 Monthly Retainers (DM, SAG·EO, Ads)</h3>
+      <ul class="chklist">
+        <li><span class="dot g">✓</span><strong>100% advance payment</strong> required for first month</li>
+        <li><span class="dot g">✓</span>Subsequent months payable by <strong>5th of each month</strong></li>
+        <li><span class="dot g">✓</span><strong>3-month minimum commitment</strong> recommended for best results</li>
+        <li><span class="dot g">✓</span>Ad spend is paid directly by client to Google/Meta (not included in management fee)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="hl"><strong>Important Notes:</strong> All prices in INR (₹) and exclude applicable GST. Print costs (business cards, brochures) are extra and billed separately. Third-party costs (domain, hosting, premium tools) are not included and are the client's responsibility. Payment via bank transfer, UPI, or online payment. Invoices provided for all payments.</div>
+
+  <!-- OPEX -->
+  <div class="slbl" style="margin-top:18px">Client Monthly Infrastructure Costs</div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Cost Item</th><th>Phase 2–3</th><th>Phase 4+</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>VPS / AWS Hosting</td><td>₹20,000–35,000</td><td>₹40,000–70,000</td><td>Scales with users and traffic</td></tr>
+        <tr><td>Local LLM Server (GPU VPS)</td><td>₹15,000–25,000</td><td>₹25,000–50,000</td><td>Critical for DPDP privacy compliance</td></tr>
+        <tr><td>Voice APIs (Phase 4 only)</td><td>—</td><td>₹15,000–50,000</td><td>Usage-based; grows with voice sessions</td></tr>
+        <tr><td>Monitoring + Backup</td><td>₹5,000–10,000</td><td>₹8,000–15,000</td><td>Grafana, Sentry, backups</td></tr>
+        <tr><td>Ad Spend (from Month 7)</td><td>₹15,000–25,000</td><td>₹25,000–60,000</td><td>Separate from management fee</td></tr>
+        <tr class="highlight"><td>Total Est. Monthly OPEX</td><td>₹55,000–95,000</td><td>₹1,13,000–2,45,000</td><td>Grows with platform scale</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ═══ SAG·EO ═══ -->
+<div class="sec" id="sec-sageo">
+  <div class="slbl">FlumenX Proprietary Framework</div>
+  <div class="sh">SAG·EO Strategy for Psyzen</div>
+  <div class="ss">SAG·EO (Strategy Augmented Growth Engine for Organic Search) is FlumenX's exclusive 4-layer search authority framework — covering SEO, AEO (Answer Engine Optimization), and GEO (Generative Engine Optimization). For Psyzen, this is the primary long-term organic growth engine. Mental health is a high-trust, high-search category where authority compounds powerfully over time.</div>
+  <div class="fb"><p><strong style="color:var(--gold2)">Why SAG·EO matters for Psyzen:</strong> Search behavior has shifted from keywords to conversations. When someone types "what kind of therapy do I need?" into ChatGPT or Gemini, Psyzen must be the answer. SAG·EO is designed to make Psyzen the cited, trusted source in both traditional Google results and AI-generated answers. SAG·EO is exclusive to FlumenX clients.</p></div>
+  <div class="g2">
+    <div class="card"><div class="chd"><div class="ib if">🔍</div><div><div class="cl">Layer 1</div><div class="ct">SEO — Search Engine Foundation</div></div></div>
+      <ul class="chklist"><li><span class="dot">✓</span>Technical SEO audit + fixes (speed, schema, Core Web Vitals)</li><li><span class="dot">✓</span>Information architecture: keyword clustering, content hierarchy</li><li><span class="dot">✓</span>On-page optimization: all pages, meta, headings, internal links</li><li><span class="dot">✓</span>Content planning: 4+ articles/month targeting CBT, DBT, anxiety, depression clusters</li><li><span class="dot">✓</span>Local SEO: "psychologist Trivandrum," "therapy Kerala" local pack targeting</li><li><span class="dot">✓</span>High-quality backlinks (minimum 5–10/month depending on plan)</li></ul>
+    </div>
+    <div class="card"><div class="chd"><div class="ib ig">🤖</div><div><div class="cl">Layer 2</div><div class="ct">AEO — Answer Engine Optimization</div></div></div>
+      <ul class="chklist"><li><span class="dot g">✓</span>Question inventory: 50–150+ mental health questions mapped to answer pages</li><li><span class="dot g">✓</span>Answer-first pages structured for Google's Featured Snippets + People Also Ask</li><li><span class="dot g">✓</span>FAQ schema, MedicalWebPage schema, LocalBusiness schema — all relevant types</li><li><span class="dot g">✓</span>AI summary optimization: content structured so AI assistants cite Psyzen as the answer</li><li><span class="dot g">✓</span>Voice search optimization: conversational queries ("what is CBT therapy" → Psyzen)</li></ul>
+    </div>
+    <div class="card"><div class="chd"><div class="ib it">🌐</div><div><div class="cl">Layer 3</div><div class="ct">GEO — Generative Engine Optimization</div></div></div>
+      <ul class="chklist"><li><span class="dot t">✓</span>Content optimized to appear in ChatGPT, Gemini, Claude, Copilot, Perplexity responses</li><li><span class="dot t">✓</span>Brand entity footprint: consistent Psyzen entity data across web (basic to premium setup)</li><li><span class="dot t">✓</span>Citable content: original data, clinical insights, research-backed articles that AI systems reference</li><li><span class="dot t">✓</span>Thought leadership pieces by clinical team on established health platforms</li><li><span class="dot t">✓</span>AI visibility tracking: monthly/bi-weekly/weekly reports on AI citation occurrence</li></ul>
+    </div>
+    <div class="card"><div class="chd"><div class="ib ir">⭐</div><div><div class="cl">Layer 4</div><div class="ct">Authority & Compounding</div></div></div>
+      <ul class="chklist"><li><span class="dot r">✓</span>Clinical advisory board content and bylines (trust signals for AI systems)</li><li><span class="dot r">✓</span>Backlink building: mental health directories, university sites, government health portals</li><li><span class="dot r">✓</span>Quarterly original data reports ("Kerala Mental Health Report 2026")</li><li><span class="dot r">✓</span>Podcast / interview series: "Mind Forward India"</li><li><span class="dot r">✓</span>Rankings and traffic reports with strategic review calls</li></ul>
+    </div>
+  </div>
+  <div class="hl">📈 <strong>SAG·EO Timeline:</strong> Month 3–6: Technical foundation + first content indexed. Month 6–9: Ranking for 10–15 target keywords. Month 9–12: First AEO appearances in AI search summaries. Year 2: Domain authority compounding — organic becomes the primary user acquisition channel, reducing dependence on paid ads.</div>
+  <div style="margin-top:20px"><div class="slbl">Recommended Plan for Psyzen</div>
+  <div class="card" style="padding:0;overflow:hidden"><table class="tbl">
+    <thead><tr><th>Phase</th><th>SAG·EO Plan</th><th>Monthly Investment</th><th>What It Delivers</th></tr></thead>
+    <tbody>
+      <tr><td>Phase 2 (Month 3–7)</td><td><span class="bdg bf">SAG-EO Core</span></td><td>₹35,000/mo</td><td>Foundation: 50Q inventory, 5 answer pages/mo, basic entity footprint, monthly AI visibility report</td></tr>
+      <tr><td>Phase 3–4 (Month 7–12)</td><td><span class="bdg bf">SAG-EO Core (continue)</span></td><td>₹35,000/mo</td><td>Growing authority: technical fixes ongoing, content compounding, local and AI search coverage building</td></tr>
+      <tr><td>Year 2 (after 12 months)</td><td><span class="bdg bg">SAG-EO Scale</span></td><td>₹55,000/mo</td><td>Scale: 150Q inventory, 10 answer pages/mo, complete entity setup, bi-weekly AI visibility tracking</td></tr>
+    </tbody>
+  </table></div></div>
+</div>
+
+<!-- ═══ FUTURE ═══ -->
+<div class="sec" id="sec-future">
+  <div class="slbl">Beyond Year 1</div>
+  <div class="sh">Expansion Roadmap — Year 2 and Beyond</div>
+  <div class="ss">Psyzen's phased architecture is designed for expansion. Each future module adds onto the core platform without disrupting it. Expansion timing should be driven by user data and revenue, not by assumptions.</div>
+  <div class="g3">
+    <div class="card"><div style="font-size:24px;margin-bottom:10px">📱</div><div class="ct">Mobile App (iOS + Android)</div><p style="margin-top:8px;font-size:13px">Native app with biometric login, push notifications for session reminders and crisis alerts, offline symptom journaling. Budget: ₹4,50,000–7,00,000. <strong>Trigger: 500+ active web users/month.</strong></p><br><span class="bdg bf">Year 2 · Q1</span></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px">🏥</div><div class="ct">Hospital Integration</div><p style="margin-top:8px;font-size:13px">White-label platform for hospital mental health departments. B2B SaaS licensing model. Custom branding, patient data isolation, NABH-aligned reporting. Potential: ₹2–10L/month per hospital system.</p><br><span class="bdg bt">Year 2 · Q2</span></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px">🌍</div><div class="ct">Malayalam-First AI</div><p style="margin-top:8px;font-size:13px">Full Malayalam conversation support with fine-tuned local LLM. Then Tamil, Hindi. Mental health in native language is massively underserved. Critical for rural Kerala penetration beyond urban educated users.</p><br><span class="bdg bg">Year 2 · Q2</span></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px">💼</div><div class="ct">Corporate Wellness SaaS</div><p style="margin-top:8px;font-size:13px">B2B subscription for corporates — anonymous employee mental health monitoring, aggregate insights dashboard, HR reporting, manager training integration. Pricing: ₹50,000–2,00,000/month per corporate client.</p><br><span class="bdg bf">Year 2 · Q1</span></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px">⌚</div><div class="ct">Wearable Integration</div><p style="margin-top:8px;font-size:13px">Apple Watch, Fitbit, Garmin — heart rate variability as anxiety indicator, sleep tracking correlation with mental health scores. Proactive check-in triggers based on biometric anomalies. Budget: ₹2,00,000.</p><br><span class="bdg br">Year 3</span></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px">🔬</div><div class="ct">Predictive Analytics</div><p style="margin-top:8px;font-size:13px">12+ months of platform data enables behavioral pattern analysis, relapse prediction, and proactive intervention suggestions. The data moat that makes Psyzen impossible to replicate. Requires trained AI on Psyzen's specific user population data.</p><br><span class="bdg bt">Year 3</span></div>
+  </div>
+  <div class="fb"><p><strong style="color:var(--gold2)">The 5-Year Vision:</strong> Psyzen as Kerala's leading mental health platform → India's AI mental health infrastructure with hospital licensing → Gulf expansion (NRI Kerala connection: UAE, Qatar, Saudi Arabia) → International licensing in South East Asia. The local LLM privacy architecture is the key international differentiator in markets where data sovereignty and healthcare data regulation is paramount.</p></div>
+</div>
+
+</div><!-- /wrap -->
+
+<div class="footer">
+  Prepared by <strong>FlumenX / Misc Archive</strong> · anoopkrishna@flumenx.com · +91 8907 634900<br>
+  <span style="opacity:.55">Confidential — For Psyzen leadership only. All projections are estimates. Compliance and legal decisions require qualified professional consultation before execution. Prices exclude GST.</span>
+</div>
+
+<script>
+function showTab(id, btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('.tb').forEach(b=>b.classList.remove('active'));
+  document.getElementById('sec-'+id).classList.add('on');
+  btn.classList.add('active');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+
+function togglePhase(n){
+  var body = document.getElementById('body'+n);
+  var arr  = document.getElementById('arr'+n);
+  if(!body) return;
+  var isOpen = body.classList.contains('open');
+  // Close all phases first
+  for(var i=0;i<5;i++){
+    var b=document.getElementById('body'+i);
+    var a=document.getElementById('arr'+i);
+    if(b){b.classList.remove('open'); b.style.display='none';}
+    if(a){a.classList.remove('open');}
+  }
+  if(!isOpen){
+    body.classList.add('open');
+    body.style.display='block';
+    arr.classList.add('open');
+  }
+}
+
+// Open phase 0 by default when on phases tab
+document.addEventListener('DOMContentLoaded',function(){
+  // ensure all phase bodies start hidden
+  for(var i=0;i<5;i++){
+    var b=document.getElementById('body'+i);
+    if(b){b.style.display='none';}
+  }
+});
+</script>
+</body>
+</html>
