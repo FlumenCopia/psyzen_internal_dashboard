@@ -167,6 +167,8 @@ hr.dv{border:none;border-top:1px solid var(--border);margin:24px 0}
   <button class="tb" onclick="showTab('budget',this)">Budget & Pricing</button>
   <button class="tb" onclick="showTab('sageo',this)">SAG·EO Plan</button>
   <button class="tb" onclick="showTab('future',this)">Future Expansion</button>
+  <button class="tb" style="color:#c4796a;border-bottom-color:transparent" onclick="showTab('fullplan',this)">📋 Full Project Plan</button>
+  <button class="tb" style="color:#5BA8A8;border-bottom-color:transparent" onclick="showTab('itbudget',this)">💻 IT Budget</button>
 </div>
 
 <div class="wrap">
@@ -447,9 +449,9 @@ hr.dv{border:none;border-top:1px solid var(--border);margin:24px 0}
             <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">⚠️ Phase 2 Critical Decisions & Challenges</p>
             <ul class="chklist">
               <li><span class="dot r">!</span><strong>Local LLM Server Setup:</strong> Client requested local LLM for DPDP privacy compliance. Ollama + LLaMA3 8B on private VPS (16GB+ RAM, GPU preferred). Budget: ₹15,000–25,000/month VPS. This must be confirmed in writing before first commit.</li>
-              <li><span class="dot r">!</span><strong>Legal Consultation:</strong> DPDP consent flows must be reviewed by a healthcare legal professional before any user-facing testing.</li>
+              <li><span class="dot r">!</span><strong>Legal Consultation:</strong> DPDP consent flows must be reviewed by a healthcare legal professional before any user-facing testing. Budget: ₹20,000–40,000 one-time legal fee.</li>
               <li><span class="dot r">!</span><strong>Clinical Advisor Engagement:</strong> A psychiatrist or clinical psychologist must review the triage logic, tier escalation triggers, and crisis response protocols before any patient interaction goes live.</li>
-              <li><span class="dot r">!</span><strong>Video Consultation Scope:</strong> Client mentioned video as a consultation mode. The base proposal lists video as Phase 4. This needs to be confirmed — either in base scope or explicitly deferred.</li>
+              <li><span class="dot r">!</span><strong>Video Consultation Scope:</strong> Client mentioned video as a consultation mode. The base proposal lists video as Phase 4. This must be confirmed in writing — either in base scope or explicitly deferred.</li>
             </ul>
             <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin:14px 0 10px">🧑‍💻 Team Required</p>
             <ul class="chklist">
@@ -587,8 +589,7 @@ hr.dv{border:none;border-top:1px solid var(--border);margin:24px 0}
           <div>
             <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:12px">💡 Revenue Funding Phase 4</p>
             <div class="card" style="background:#fffbef;border-color:var(--gold);margin-bottom:12px">
-              <p>By Month 9, the MVP is live and Phase 3 has delivered clinical validation. Psyzen can realistically 
-                have 3+ pilot institutional clients — which offsets a significant portion of Phase 4 development costs.</p>
+              <p>By Month 9, the MVP is live and Phase 3 has delivered clinical validation. Psyzen can realistically have 3+ pilot institutional clients paying ₹50,000–1,00,000/month. That's ₹1,50,000–3,00,000/month in revenue — which offsets a significant portion of Phase 4 development costs.</p>
             </div>
             <p style="font-weight:600;color:var(--forest);font-size:13.5px;margin-bottom:10px">📣 FlumenX Services This Phase</p>
             <div style="display:flex;flex-direction:column;gap:10px">
@@ -905,6 +906,247 @@ hr.dv{border:none;border-top:1px solid var(--border);margin:24px 0}
   <div class="fb"><p><strong style="color:var(--gold2)">The 5-Year Vision:</strong> Psyzen as Kerala's leading mental health platform → India's AI mental health infrastructure with hospital licensing → Gulf expansion (NRI Kerala connection: UAE, Qatar, Saudi Arabia) → International licensing in South East Asia. The local LLM privacy architecture is the key international differentiator in markets where data sovereignty and healthcare data regulation is paramount.</p></div>
 </div>
 
+
+<!-- ═══ FULL PROJECT PLAN ═══ -->
+<div class="sec" id="sec-fullplan">
+  <div class="slbl">Single-View Strategic Summary</div>
+  <div class="sh">The Full Project — One Plan, One Budget, Total Clarity</div>
+  <div class="ss">Everything Psyzen is building, what it costs, why it costs that, and how you pay for it. This is the complete picture — IT development only. Marketing and branding are separate and billed independently.</div>
+
+  <!-- HERO NUMBERS -->
+  <div class="g4">
+    <div class="kb" style="border-color:var(--rose)"><div class="kn" style="color:var(--rose)">12 Months</div><div class="ks">Total project timeline (Brand → Full Platform)</div></div>
+    <div class="kb" style="border-color:var(--forest)"><div class="kn">₹20.85L–26.85L</div><div class="ks">Total IT development cost (all 4 phases)</div></div>
+    <div class="kb" style="border-color:var(--teal)"><div class="kn">₹56K–1.41L</div><div class="ks">Estimated monthly server + API costs after launch</div></div>
+    <div class="kb" style="border-color:var(--gold)"><div class="kn">7 Dashboards</div><div class="ks">Patient, Doctor, Psych, Clinical Psych, Psychiatrist, Admin, Analytics</div></div>
+  </div>
+
+  <!-- WHAT WE ARE BUILDING -->
+  <div class="fb" style="margin-bottom:20px">
+    <p style="font-size:16px;font-family:'Cormorant Garamond',serif;font-weight:600;margin-bottom:10px;color:var(--gold2)">What We Are Actually Building</p>
+    <p>Psyzen is not a website. It is not a chatbot. It is a full-stack clinical-grade AI platform with a local privacy-first LLM, a 4-tier medical escalation system, real-time crisis detection, multi-modal consultation (text, voice, video), RAG-powered knowledge retrieval, consent management, audit logging, and a multi-role dashboard system for patients and 5 clinical roles. This is the kind of platform that healthcare enterprises spend ₹2–5Cr building with large teams. We are doing it in 12 months at startup speed, without sacrificing clinical safety.</p>
+  </div>
+
+  <!-- WHY IT COSTS WHAT IT COSTS -->
+  <div class="slbl">Why This Investment Is Justified</div>
+  <div class="sh">You Are Not Paying for a Website. You Are Paying for Clinical Infrastructure.</div>
+  <div class="ss">Every line item in this budget exists because the platform requires it — not because it is convenient. Here is the honest breakdown of complexity and cost drivers.</div>
+
+  <div class="g2">
+    <div class="card">
+      <div class="chd"><div class="ib if">🤖</div><div><div class="cl">Cost Driver 1</div><div class="ct">Local LLM — Privacy by Architecture</div></div></div>
+      <p>Running a local LLM (Ollama + LLaMA3 8B) instead of OpenAI means patient mental health conversations never leave your server — which is the correct approach for DPDP compliance. But it requires a dedicated GPU server (₹15,000–30,000/month), custom integration work, prompt engineering for clinical safety, and ongoing tuning. OpenAI would be faster to build — but legally and ethically wrong for this use case.</p>
+    </div>
+    <div class="card">
+      <div class="chd"><div class="ib ir">🚨</div><div><div class="cl">Cost Driver 2</div><div class="ct">Crisis Detection — Clinical-Grade Safety</div></div></div>
+      <p>Building an AI that reliably detects suicidal ideation, self-harm indicators, and psychiatric emergencies is one of the hardest NLP engineering challenges. It requires a multi-layer detection system (keyword, LLM scoring, history analysis), clinical advisor validation with 50+ scenarios, a real-time alert pipeline, and a legal liability protocol. A system that misses a crisis can cause patient harm. This cannot be cut short.</p>
+    </div>
+    <div class="card">
+      <div class="chd"><div class="ib ig">🏥</div><div><div class="cl">Cost Driver 3</div><div class="ct">4-Tier Clinical Escalation — Not a Simple Chatbot</div></div></div>
+      <p>The platform routes patients through 4 distinct clinical tiers — AI + Social Worker → Psychologist → Clinical Psychologist → Psychiatrist — with dynamic reassessment, tier override, and consent re-capture at each escalation. Each tier has its own dashboard, data permissions, and workflow logic. This is not a chat interface. It is a multi-role clinical workflow system.</p>
+    </div>
+    <div class="card">
+      <div class="chd"><div class="ib it">🔒</div><div><div class="cl">Cost Driver 4</div><div class="ct">RAG Pipeline — Medical Knowledge Retrieval</div></div></div>
+      <p>The RAG system ingests CBT/DBT protocols, clinical guidelines, and crisis response documents, converts them to vector embeddings, stores them in ChromaDB, and retrieves relevant context for every AI response. Building a healthcare-grade RAG pipeline with hallucination guards and clinical validation is significantly more complex than a general-purpose chatbot RAG. Every retrieved response must be safe, contextually accurate, and clinically appropriate.</p>
+    </div>
+    <div class="card">
+      <div class="chd"><div class="ib if">⚖️</div><div><div class="cl">Cost Driver 5</div><div class="ct">DPDP Compliance + Consent Architecture</div></div></div>
+      <p>India's Digital Personal Data Protection Act 2023 requires specific, granular, freely-given consent for sensitive health data. For Psyzen, this means separate consent capture for: general platform use, AI interaction, data sharing between clinical tiers, session recording, and analytics. Every consent event must be logged immutably. The consent management module alone is a significant engineering investment — and it must be reviewed by a healthcare legal professional before go-live.</p>
+    </div>
+    <div class="card">
+      <div class="chd"><div class="ib ig">🎙️</div><div><div class="cl">Cost Driver 6</div><div class="ct">Voice + Video — Multi-Modal Clinical Sessions</div></div></div>
+      <p>Voice consultation requires a complete STT → AI → TTS → audio pipeline with sub-2-second latency. Self-hosting Whisper for STT and Coqui TTS for speech output ensures privacy but adds engineering complexity. Video consultation using Daily.co or Agora SDK adds real-time WebRTC infrastructure. Both require separate consent flows, session recording management, and integration with the clinical notes system.</p>
+    </div>
+  </div>
+
+  <!-- WEBSITE PRICING CLARITY -->
+  <div class="slbl" style="margin-top:8px">Website Investment — Exactly What You Get</div>
+  <div class="sh">Website Pricing: Clear and Complete</div>
+  <div class="ss">The "website" for Psyzen is not a single deliverable. It evolves across 3 phases. Here is exactly what each phase delivers and what it costs.</div>
+
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Website Component</th><th>Phase</th><th>Cost</th><th>Pages / Features</th><th>Purpose</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Teaser / Pre-Launch Website</td><td>Phase 1 — Month 2</td><td><strong>₹85,000</strong> (one-time)</td><td>6 pages: Home, How It Works, Services, About, For Professionals, Contact + Waitlist form + CMS + GA4 + WhatsApp</td><td>Build audience before platform launches. Collect waitlist. Create first SEO footprint.</td><td><span class="bdg bt">INCLUDED in Phase 1</span></td></tr>
+        <tr><td>Platform Web Application (MVP)</td><td>Phase 2 — Month 3–7</td><td><strong>Included in MVP budget</strong> (₹10–12L)</td><td>30+ screens across 5 dashboards: Patient, Social Worker, Psychologist, Clinical Psych, Doctor. Auth, chat, appointments, consent flows, profile pages.</td><td>This IS the product. The patient-facing and clinician-facing web application. Not a marketing site.</td><td><span class="bdg bf">INCLUDED in Phase 2</span></td></tr>
+        <tr><td>Full Marketing + Platform Site (v3)</td><td>Phase 4 — Month 9–12</td><td><strong>Included in Phase 4 budget</strong> (₹4–6L)</td><td>SEO-optimized full site: dedicated patient landing page, professional landing page, blog hub (20+ articles), pricing, conversion-optimized signup flow.</td><td>Powers organic traffic, ad landing pages, B2B institutional sales. The SEO growth engine.</td><td><span class="bdg bf">INCLUDED in Phase 4</span></td></tr>
+        <tr class="highlight"><td>Website Total Investment</td><td>Across all phases</td><td><strong>₹85,000 explicit + included in dev</strong></td><td>3 versions, 36+ unique pages, full CMS, SEO-ready, mobile-first</td><td>Complete web presence from Day 1 teaser to Year-1 full platform site</td><td></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- FULL TIMELINE -->
+  <div class="slbl" style="margin-top:20px">Complete Project Timeline</div>
+  <div class="sh">12 Months — What Gets Built, When</div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Month</th><th>Phase</th><th>What Gets Delivered</th><th>IT Budget This Period</th><th>Key Milestone</th></tr></thead>
+      <tbody>
+        <tr><td>Month 1</td><td>Phase 0 — Brand</td><td>Complete brand identity. Logo, guidelines, social templates, brand voice. Handed to IT + DM.</td><td>—</td><td>Brand guidelines approved</td></tr>
+        <tr><td>Month 2</td><td>Phase 1 — Digital Base</td><td>Teaser website live. Waitlist form active. Social accounts posting. DM pre-launch campaign begins.</td><td>₹85,000 (website)</td><td>Website live + 100 waitlist signups</td></tr>
+        <tr><td>Month 3–4</td><td>Phase 2 — MVP (early)</td><td>UI/UX design all screens. Authentication system. Consent management. Database architecture. Local LLM server setup.</td><td>₹4,00,000–5,00,000</td><td>All screens designed + approved. Auth + consent live.</td></tr>
+        <tr><td>Month 5–6</td><td>Phase 2 — MVP (mid)</td><td>Patient dashboard. AI chat interface (Tier 1–2). Patient registration + onboarding flow. Backend APIs for chat + history.</td><td>₹3,50,000–4,50,000</td><td>Patient can register, consent, and chat with AI</td></tr>
+        <tr><td>Month 7</td><td>Phase 2 → 3 handoff</td><td>Doctor/Social Worker dashboard. Appointment system. Beta testing with 5–10 pilot users. Phase 2 delivered and invoiced. Phase 3 begins.</td><td>₹2,50,000–3,00,000</td><td>Full MVP live. End-to-end flow tested. First revenue.</td></tr>
+        <tr><td>Month 7–8</td><td>Phase 3 — AI (early)</td><td>RAG pipeline built. ChromaDB vector store populated with CBT/DBT knowledge. Cluster A/B detection prompts. 50+ crisis scenarios built and tested.</td><td>₹3,00,000–4,00,000</td><td>RAG live. Crisis detection built and internally tested.</td></tr>
+        <tr><td>Month 9</td><td>Phase 3 — AI (complete)</td><td>Crisis detection clinically validated. All 4 tiers active. Admin dashboard. Analytics. Emergency alert system live. Soft public launch.</td><td>₹3,00,000–4,00,000</td><td>All 4 tiers + crisis detection validated. Soft launch.</td></tr>
+        <tr><td>Month 9–11</td><td>Phase 4 — Voice+Scale</td><td>Voice STT/TTS pipeline. Video consultation via Daily.co. Malayalam language support. Advanced analytics BI dashboards.</td><td>₹2,50,000–3,50,000</td><td>Voice sessions live. Video live. Malayalam active.</td></tr>
+        <tr><td>Month 12</td><td>Phase 4 — Full Launch</td><td>Security audit + pen testing. Full platform website v3. Load testing to 100+ concurrent. Full public marketing launch.</td><td>₹1,50,000–2,50,000</td><td>Security audit passed. Full public launch. 500+ users target.</td></tr>
+        <tr class="highlight"><td>Total: 12 Months</td><td>4 IT Phases</td><td>Complete clinical AI platform — teaser site → brand → MVP → AI layer → voice/video → full launch</td><td><strong>₹20,85,000–26,85,000</strong></td><td>500+ users · 5+ institutional clients · Revenue generating</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- PAYMENT PLAN -->
+  <div class="slbl" style="margin-top:20px">Investment & Payment Plan</div>
+  <div class="sh">50% / 30% / 20% — Phase-by-Phase Payment</div>
+  <div class="ss">No large upfront lump sum. Each phase follows a 3-step payment structure tied to delivery milestones. You pay as work is completed and approved — not in advance of it.</div>
+
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Phase</th><th>Total IT Cost</th><th>50% — Advance</th><th>30% — First Demo</th><th>20% — On Delivery</th><th>Demo Milestone</th></tr></thead>
+      <tbody>
+        <tr><td>Website (Phase 1)</td><td>₹85,000</td><td>₹42,500 — Project start</td><td>₹25,500 — Design mockup approved</td><td>₹17,000 — Website live</td><td>Figma mockup of all pages</td></tr>
+        <tr><td>Phase 2 — MVP (₹11L mid)</td><td>₹10L–12L</td><td>₹5,00,000–6,00,000 — Month 3 start</td><td>₹3,00,000–3,60,000 — Month 5: Patient dashboard working</td><td>₹2,00,000–2,40,000 — Month 7: Full MVP delivered</td><td>Patient registers, chats with AI, doctor sees alert</td></tr>
+        <tr><td>Phase 3 — AI (₹7L mid)</td><td>₹6L–8L</td><td>₹3,00,000–4,00,000 — Month 7 start</td><td>₹1,80,000–2,40,000 — Month 8: RAG + crisis demo</td><td>₹1,20,000–1,60,000 — Month 9: All 4 tiers live</td><td>Live crisis detection demo. All tiers working end-to-end.</td></tr>
+        <tr><td>Phase 4 — Voice+Scale (₹5L mid)</td><td>₹4L–6L</td><td>₹2,00,000–3,00,000 — Month 9 start</td><td>₹1,20,000–1,80,000 — Month 11: Voice + video demo</td><td>₹80,000–1,20,000 — Month 12: Full launch</td><td>Live voice session demo. Video consultation working.</td></tr>
+        <tr class="highlight"><td><strong>Total IT Investment</strong></td><td><strong>₹20.85L–26.85L</strong></td><td><strong>₹10.42L–13.42L</strong> across phase starts</td><td><strong>₹6.25L–8.05L</strong> on demo approvals</td><td><strong>₹4.17L–5.37L</strong> on final deliveries</td><td>Every payment tied to delivered, working software</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="hl" style="margin-top:14px">💡 <strong>Why this payment structure protects you:</strong> You only pay the full 100% of each phase when you have working, approved software in your hands. The 20% final payment is your quality gate — if the milestone isn't met, the final payment isn't released. No risk of paying for undelivered work.</div>
+</div>
+
+<!-- ═══ IT BUDGET ═══ -->
+<div class="sec" id="sec-itbudget">
+  <div class="slbl">IT Investment — Full Transparency</div>
+  <div class="sh">Complete IT Budget Breakdown</div>
+  <div class="ss">Everything on this page is IT-side only. No DM, no branding, no SAG·EO. This is what it costs to build the actual platform — broken down by development work, API integrations, and server infrastructure, with clear labeling of what is included in the development budget and what the client pays separately as ongoing costs.</div>
+
+  <div class="fb">
+    <p><strong style="color:var(--gold2)">Reading this document:</strong> "Included" = covered in the development invoice. "Excluded" = client pays directly to the third-party vendor. Development costs are one-time. Infrastructure costs are ongoing monthly.</p>
+  </div>
+
+  <!-- DEV COST BREAKDOWN -->
+  <div class="slbl">Development Cost by Phase</div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Module</th><th>Phase</th><th>Cost Range</th><th>What it Includes</th></tr></thead>
+      <tbody>
+        <tr><td>Teaser Website</td><td>Phase 1</td><td>₹85,000</td><td>6-page responsive site, waitlist, CMS, GA4, WhatsApp integration, basic SEO setup, hosting config</td></tr>
+        <tr style="background:#fafaf5"><td colspan="4" style="font-weight:700;color:var(--forest);font-size:12px;letter-spacing:.5px;padding:8px 14px">PHASE 2 — MVP DEVELOPMENT</td></tr>
+        <tr><td>UI/UX Design System</td><td>Phase 2</td><td>₹1,40,000–1,80,000</td><td>30+ screens designed in Figma. Design tokens. Component library. Responsive layouts. Accessibility pass.</td></tr>
+        <tr><td>Frontend Development (Next.js)</td><td>Phase 2</td><td>₹3,50,000–4,00,000</td><td>Patient dashboard, Doctor dashboard, Auth flows, AI chat interface (WebSocket), appointment screens, consent UI, all 30+ screens coded</td></tr>
+        <tr><td>Backend Development (Django)</td><td>Phase 2</td><td>₹3,00,000–3,50,000</td><td>Django REST APIs, PostgreSQL schema, Redis + Celery async tasks, user role system, appointment logic, notification system</td></tr>
+        <tr><td>Local LLM Integration (Basic)</td><td>Phase 2</td><td>₹1,20,000–1,50,000</td><td>Ollama server setup, LangChain integration, system prompt engineering, context window management, basic response safety filter</td></tr>
+        <tr><td>Auth + Consent System</td><td>Phase 2</td><td>₹60,000–80,000</td><td>JWT auth, OTP (MSG91), multi-tier DPDP consent flows, immutable consent audit log, session management</td></tr>
+        <tr style="background:#fafaf5"><td colspan="4" style="font-weight:700;color:var(--forest);font-size:12px;letter-spacing:.5px;padding:8px 14px">PHASE 3 — AI ENHANCEMENT</td></tr>
+        <tr><td>RAG Pipeline + ChromaDB</td><td>Phase 3</td><td>₹1,80,000–2,20,000</td><td>Document ingestion (PDF/DOCX), text chunking, SentenceTransformers embeddings, ChromaDB vector store, similarity search, retrieval + response pipeline</td></tr>
+        <tr><td>Crisis Detection Engine</td><td>Phase 3</td><td>₹1,40,000–1,80,000</td><td>Multi-layer detection system (keyword + LLM scoring + history analysis), structured JSON risk output, 4 risk levels, emergency alert pipeline, WebSocket push notification to psychiatrist/admin</td></tr>
+        <tr><td>Personality Cluster A/B Detection</td><td>Phase 3</td><td>₹70,000–90,000</td><td>Prompt-engineered conversation analysis, structured clinical signals output, integration with triage tier recommendation, clinical advisor validation workflow</td></tr>
+        <tr><td>Full 4-Tier Triage System</td><td>Phase 3</td><td>₹90,000–1,20,000</td><td>All 4 clinical tier dashboards active, dynamic tier reassessment logic, tier override by clinicians, cross-tier data visibility controls</td></tr>
+        <tr><td>Admin Dashboard + Audit Logs</td><td>Phase 3</td><td>₹70,000–90,000</td><td>Full platform admin view, user + role management, AI monitoring panel, knowledge base management, emergency management, immutable audit log viewer</td></tr>
+        <tr><td>Analytics + Reporting System</td><td>Phase 3</td><td>₹50,000–70,000</td><td>Patient outcome tracking, risk trend dashboards, AI performance metrics, session analytics, clinical team workload, exportable reports</td></tr>
+        <tr style="background:#fafaf5"><td colspan="4" style="font-weight:700;color:var(--forest);font-size:12px;letter-spacing:.5px;padding:8px 14px">PHASE 4 — VOICE, VIDEO & SCALE</td></tr>
+        <tr><td>Voice Interface (STT + TTS)</td><td>Phase 4</td><td>₹1,40,000–1,80,000</td><td>Whisper STT integration (self-hosted via faster-whisper), Coqui TTS integration, WebRTC audio streaming via mediasoup, voice → AI → voice pipeline, &lt;2s latency optimization</td></tr>
+        <tr><td>Video Consultation Module</td><td>Phase 4</td><td>₹1,10,000–1,40,000</td><td>Daily.co SDK integration, scheduled video sessions, doctor initiates/patient joins via secure link, optional recording with separate consent, post-session notes auto-attachment</td></tr>
+        <tr><td>Malayalam Language Support</td><td>Phase 4</td><td>₹55,000–75,000</td><td>Mistral 7B multilingual model integration, translation layer for AI responses, UI language toggle (English/Malayalam)</td></tr>
+        <tr><td>Security Audit + Pen Testing</td><td>Phase 4</td><td>₹80,000–1,00,000</td><td>External penetration testing engagement, RBAC validation, encryption audit, DPDP final compliance review, vulnerability remediation</td></tr>
+        <tr><td>Performance + Load Testing</td><td>Phase 4</td><td>₹40,000–60,000</td><td>Load testing to 100+ concurrent users, query optimization, connection pooling, CDN setup, response time benchmarking</td></tr>
+        <tr><td>Platform Website v3 (SEO + Conversion)</td><td>Phase 4</td><td>₹50,000–70,000</td><td>Full SEO-optimized marketing + platform site, patient landing page, professional landing page, blog hub, conversion-optimized signup flow</td></tr>
+        <tr class="highlight"><td><strong>TOTAL IT DEVELOPMENT</strong></td><td>All phases</td><td><strong>₹20,85,000–26,85,000</strong></td><td>Complete AI mental health triage platform — MVP + AI + Voice/Video + Security + 3 website versions</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- API INTEGRATIONS -->
+  <div class="slbl" style="margin-top:20px">API Integrations & Third-Party Services</div>
+  <div class="sh">What's Integrated — Included vs Excluded</div>
+
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Integration / API</th><th>Purpose</th><th>Phase</th><th>Dev Cost Status</th><th>Ongoing Cost</th></tr></thead>
+      <tbody>
+        <tr><td>Ollama + LLaMA3 8B (Local LLM)</td><td>Primary AI triage conversation engine — fully private, no data leaves server</td><td>Phase 2+</td><td><span class="bdg bf">Included in dev</span></td><td>₹0 software cost (open source). Server cost excluded — see infrastructure.</td></tr>
+        <tr><td>Django Channels (WebSocket)</td><td>Real-time chat, live doctor alerts, crisis notification push</td><td>Phase 2+</td><td><span class="bdg bf">Included in dev</span></td><td>₹0 (open source library)</td></tr>
+        <tr><td>SentenceTransformers (Embeddings)</td><td>Converting clinical documents to vectors for RAG search — runs locally</td><td>Phase 3+</td><td><span class="bdg bf">Included in dev</span></td><td>₹0 (open source, self-hosted)</td></tr>
+        <tr><td>ChromaDB (Vector Database)</td><td>Stores knowledge embeddings for RAG retrieval — self-hosted</td><td>Phase 3+</td><td><span class="bdg bf">Included in dev</span></td><td>₹0 (open source, same server)</td></tr>
+        <tr><td>LangChain (AI Orchestration)</td><td>Manages LLM calls, RAG pipeline, prompt templates, conversation history</td><td>Phase 2+</td><td><span class="bdg bf">Included in dev</span></td><td>₹0 (open source library)</td></tr>
+        <tr><td>faster-whisper (STT — Voice)</td><td>Speech-to-Text for voice consultations — self-hosted, fully private</td><td>Phase 4</td><td><span class="bdg bf">Included in dev</span></td><td>₹0 software (runs on LLM server, included in server cost)</td></tr>
+        <tr><td>Coqui TTS (Text-to-Speech)</td><td>AI voice response generation — self-hosted, fully private</td><td>Phase 4</td><td><span class="bdg bf">Included in dev</span></td><td>₹0 software (open source, self-hosted)</td></tr>
+        <tr><td>Mistral 7B (Malayalam AI)</td><td>Multilingual model for Malayalam conversation support</td><td>Phase 4</td><td><span class="bdg bf">Included in dev</span></td><td>₹0 software (runs on existing LLM server)</td></tr>
+        <tr><td>MSG91 / Twilio (SMS + OTP)</td><td>Phone verification OTP for patient + professional registration</td><td>Phase 2+</td><td><span class="bdg bf">Integration included</span></td><td>₹3,000–8,000/mo (usage-based) — <span class="bdg br">Client pays MSG91/Twilio directly</span></td></tr>
+        <tr><td>Daily.co SDK (Video Consultation)</td><td>Secure video sessions between patients and doctors/psychiatrists</td><td>Phase 4</td><td><span class="bdg bf">Integration included</span></td><td>₹6,000–20,000/mo (usage-based per minute) — <span class="bdg br">Client pays Daily.co directly</span></td></tr>
+        <tr><td>Brevo / Mailchimp (Email)</td><td>Appointment reminders, session summaries, waitlist nurture emails</td><td>Phase 2+</td><td><span class="bdg bf">Integration included</span></td><td>₹2,000–5,000/mo — <span class="bdg br">Client account</span></td></tr>
+        <tr><td>Google Analytics 4 + Meta Pixel</td><td>User behavior analytics, marketing attribution for ad campaigns</td><td>Phase 1+</td><td><span class="bdg bf">Integration included</span></td><td>₹0 (free)</td></tr>
+        <tr><td>Sentry (Error Monitoring)</td><td>Real-time error detection and debugging for production platform</td><td>Phase 2+</td><td><span class="bdg bf">Integration included</span></td><td>₹3,000–8,000/mo — <span class="bdg br">Client account</span></td></tr>
+        <tr><td>Grafana (Performance Monitoring)</td><td>Infrastructure and API performance dashboards, uptime monitoring</td><td>Phase 2+</td><td><span class="bdg bf">Setup included</span></td><td>₹2,000–5,000/mo — <span class="bdg br">Client account</span></td></tr>
+        <tr><td>Cloudflare CDN + SSL</td><td>Content delivery, SSL certificate, DDoS protection, DNS management</td><td>Phase 1+</td><td><span class="bdg bf">Setup included</span></td><td>₹0 free tier / ₹5,000+/mo for Pro — <span class="bdg br">Client account</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SERVER INFRASTRUCTURE -->
+  <div class="slbl" style="margin-top:20px">Server & Hosting Infrastructure</div>
+  <div class="sh">Monthly Infrastructure Costs — All Excluded from Dev Budget</div>
+  <div class="ss">These are ongoing monthly costs that the client pays directly to hosting providers after the platform is live. They are NOT included in the development invoice. Initial server configuration and deployment is included in the development budget.</div>
+
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Infrastructure Component</th><th>Purpose</th><th>Recommended Provider</th><th>Phase 2–3 Cost/mo</th><th>Phase 4+ Cost/mo</th><th>Note</th></tr></thead>
+      <tbody>
+        <tr><td>Local LLM GPU Server</td><td>Runs Ollama + LLaMA3 8B, Whisper STT, Coqui TTS — the AI brain of the platform</td><td>Hetzner GPU, Lambda Labs, or RunPod</td><td>₹15,000–25,000</td><td>₹25,000–50,000</td><td>Most important server. Cannot be replaced with cheaper CPU-only option without severe latency degradation.</td></tr>
+        <tr><td>Main Application Server</td><td>Django backend, Celery workers, Redis, Nginx</td><td>AWS EC2 (t3.xlarge) or Hetzner CX41</td><td>₹12,000–25,000</td><td>₹25,000–50,000</td><td>Scales horizontally as user count grows</td></tr>
+        <tr><td>Managed PostgreSQL Database</td><td>All patient data, clinical records, audit logs, consent logs</td><td>AWS RDS or Supabase</td><td>₹5,000–12,000</td><td>₹10,000–20,000</td><td>Managed service ensures daily automated backups and security patches</td></tr>
+        <tr><td>Redis Instance</td><td>Session caching, Celery task queue, WebSocket connection management</td><td>AWS ElastiCache or Upstash</td><td>₹3,000–6,000</td><td>₹5,000–10,000</td><td>Can share server with main app in early stages</td></tr>
+        <tr><td>Object Storage (S3 / Backblaze)</td><td>Session recording files, uploaded clinical documents, profile photos</td><td>AWS S3 or Backblaze B2</td><td>₹2,000–5,000</td><td>₹4,000–10,000</td><td>Usage-based, grows with patient volume</td></tr>
+        <tr><td>SMS / OTP (MSG91)</td><td>Patient + clinician registration OTP, appointment SMS reminders</td><td>MSG91 (India recommended)</td><td>₹3,000–6,000</td><td>₹5,000–12,000</td><td>Usage-based. Approx ₹0.18–0.22 per SMS.</td></tr>
+        <tr><td>Video Consultation (Daily.co)</td><td>Real-time encrypted video sessions between patients and doctors</td><td>Daily.co</td><td>— (Phase 4 only)</td><td>₹6,000–25,000</td><td>~$0.004/min per participant. 100 sessions/month × 60 min = ~₹3,000. Scales with usage.</td></tr>
+        <tr><td>Email Service (Brevo)</td><td>Transactional emails (OTP, reminders), newsletter to waitlist</td><td>Brevo (free to 300/day) → paid</td><td>₹0–3,000</td><td>₹2,000–5,000</td><td>Free tier adequate for beta. Paid plan needed at scale.</td></tr>
+        <tr><td>Domain Registration</td><td>Primary domain (e.g. psyzen.in or psyzen.com)</td><td>GoDaddy / Namecheap</td><td>₹125 (~₹1,500/yr)</td><td>₹125/mo</td><td>One-time annual renewal</td></tr>
+        <tr><td>Monitoring + Error Tracking</td><td>Sentry (errors) + Grafana (performance dashboards) + uptime alerts</td><td>Sentry.io + Grafana Cloud</td><td>₹3,000–6,000</td><td>₹5,000–10,000</td><td>Critical for healthcare platform — cannot skip. Patient safety depends on knowing about issues immediately.</td></tr>
+        <tr class="highlight"><td><strong>Total Monthly Infrastructure</strong></td><td>All components combined</td><td></td><td><strong>₹43,000–88,000/mo</strong><br><small>Development + beta phase</small></td><td><strong>₹87,000–1,92,000/mo</strong><br><small>Full platform at scale</small></td><td>Starts conservative. Scales with patient volume and session count.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ONE-TIME NON-DEV -->
+  <div class="slbl" style="margin-top:20px">One-Time Costs — Outside Development Budget</div>
+  <div class="card" style="padding:0;overflow:hidden">
+    <table class="tbl">
+      <thead><tr><th>Cost Item</th><th>What It Covers</th><th>Estimated Cost</th><th>Phase</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>Healthcare Legal Consultation</td><td>DPDP Act consent flow review, Telemedicine Guidelines 2020 compliance, crisis detection liability protocol documentation</td><td>₹20,000–40,000</td><td>Before Phase 2 user testing</td><td><span class="bdg br">Excluded — client engages lawyer directly</span></td></tr>
+        <tr><td>Clinical Advisor Engagement</td><td>Psychiatrist or clinical psychologist validates: triage logic, tier escalation, crisis detection scenarios (50+ scripts), CBT/DBT knowledge base curation</td><td>₹30,000–80,000</td><td>Phase 2–3</td><td><span class="bdg br">Excluded — client engages clinical advisor</span></td></tr>
+        <tr><td>External Security Penetration Test</td><td>Third-party cybersecurity firm tests platform for vulnerabilities before full public launch. Healthcare platforms require this before handling patient data at scale.</td><td>₹50,000–1,00,000</td><td>Phase 4</td><td><span class="bdg bw">Partially included — internal security hardening included. External pen test firm = excluded.</span></td></tr>
+        <tr class="highlight"><td><strong>One-Time Non-Dev Total</strong></td><td></td><td><strong>₹1,00,000–2,20,000</strong></td><td>Across Year 1</td><td>Budget for these before starting. They are non-negotiable for a healthcare platform.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- TOTAL SUMMARY -->
+  <div class="slbl" style="margin-top:20px">Complete IT Investment Summary</div>
+  <div class="card" style="background:var(--forest);color:#fff;border-color:var(--forest)">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:700;color:var(--gold2);margin-bottom:18px">Year 1 Total IT Investment — Psyzen</div>
+    <div class="g3">
+      <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:18px;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--gold2)">₹20.85L–26.85L</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:6px">One-time IT development cost<br>Paid across 4 phases in 50/30/20 structure</div>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:18px;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--teal)">₹43K–1.92L/mo</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:6px">Ongoing infrastructure costs<br>Client pays directly to providers</div>
+      </div>
+      <div style="background:rgba(255,255,255,.07);border-radius:10px;padding:18px;text-align:center">
+        <div style="font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:700;color:var(--rose)">₹1L–2.2L</div>
+        <div style="font-size:11px;color:rgba(255,255,255,.5);margin-top:6px">One-time non-dev costs<br>Legal, clinical advisor, pen testing</div>
+      </div>
+    </div>
+    <div style="margin-top:18px;font-size:13px;color:rgba(255,255,255,.6);line-height:1.75">
+      <strong style="color:rgba(255,255,255,.85)">What this builds:</strong> A privacy-first AI mental health triage platform with local LLM, 4-tier clinical escalation, RAG knowledge retrieval, real-time crisis detection, multi-role dashboards (7 dashboard types), DPDP-compliant consent management, voice + video consultation, Malayalam language support, full analytics, and a security-audited, load-tested production deployment. Comparable enterprise platforms cost ₹2–5Cr+ with large teams. This is built at startup speed without cutting clinical safety corners.
+    </div>
+  </div>
+</div>
 </div><!-- /wrap -->
 
 <div class="footer">
